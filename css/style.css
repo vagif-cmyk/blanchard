@@ -1,0 +1,140 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+.container {
+  max-width: 1600;
+  margin: 0 160px;
+}
+
+/* check mark  */
+
+.check-mark {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border-radius: 50%;
+}
+
+.check-mark::before {
+  content: "";
+  position: absolute;
+  left: 9.1px;
+  width: 7px;
+  height: 2px;
+  background: #fff;
+  transform: rotate(35deg);
+  transition: .2s;
+}
+
+.check-mark::after {
+  content: "";
+  position: absolute;
+  right: 9.1px;
+  width: 7px;
+  height: 2px;
+  background: #fff;
+  transform: rotate(-35deg);
+  transition: .2s;
+}
+
+/* burger */
+
+.burger {
+  position: relative;
+  display: none;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+}
+
+.burger .burger__span, .burger .burger__span::before, .burger .burger__span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 3px;
+  margin-top: -1px;
+  margin-left: -15px;
+  background-color: #fff;
+}
+
+.burger .burger__span {
+  width: 28px;
+}
+
+.burger .burger__span::before, .burger .burger__span::after {
+  content: '';
+}
+
+.burger .burger__span::before {
+  width: 36px;
+  transform: translateY(-8px);
+}
+
+.burger .burger__span::after {
+  width: 24px;
+  transform: translateY(8px);
+}
+
+.burger-active .burger__span::after {
+  transition: .2s;
+  transform: rotate(45deg);
+}
+
+.burger-active .burger__span::before {
+  transition: .2s;
+  transform: rotate(-45deg);
+}
+
+/* section checkbox         !!!!!!!!!!!!!   переделать под макет     !!!!!!!!!!*/
+.checkbox {
+  width: 176px;
+  padding: 21px 10px 20px 30px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.checkbox__title {
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+.checkbox__item {
+  padding-bottom: 20px;
+}
+.checkbox__label {
+  position: relative;
+  padding-left: 24px;
+  color: #333;
+  cursor: pointer;
+}
+.checkbox__check {
+  display: none;
+}
+.checkbox__span {
+  position: absolute;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  border: 1px solid #999;
+  border-radius: 3px;
+  transition: border .2s ease-in-out;
+}
+.checkbox__span::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+}
+.checkbox__check:checked + .checkbox__span::before {
+  opacity: 1;
+}
+.checkbox__check:checked + .checkbox__span {
+  border: 1px solid #CCB26E;
+}
