@@ -357,17 +357,26 @@ template {
   display: none;
 }
 
-  /* castom  */
-  * {
-    box-sizing: border-box;
-  }
+/* castom  */
 
-  a {
-    text-decoration: none;
-  }
-  ul {
-    list-style-type: none;
-  }
-  button {
-    border: none;
-  }
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  border: none;
+}

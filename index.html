@@ -7,29 +7,164 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blanchard - художественная галерея</title>
 
+  <!-- choises API -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
   <!-- swiper API -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-  <!-- fonts from Google -->
+  <!-- Google fonts API  -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
     rel="stylesheet">
 
   <link rel="stylesheet" href="./css/normalize.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/simplebar.css">
+  <link rel="stylesheet" href="./css/head.css">
+  <link rel="stylesheet" href="./css/hero.css">
   <link rel="stylesheet" href="./css/media.css">
   <script defer src="./scripts/main.js"></script>
+
+  <!-- simplebar API -->
+  <script defer src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
 </head>
 
 <body>
-  <div class="container">
-    <header>
-      <div class="burger">
-        <div class="burger__span"></div>
+
+  <div class="box-slider">
+    <header class="header">
+
+      <div class="bgd-black">
+        <div class="container header__content">
+          <div class="burger">
+            <div class="burger__span"></div>
+          </div>
+          <a href="./index.html" class="logo">
+            <img src="./img/head/logo.svg" alt="Логотип. Художественная галерея">
+          </a>
+          <nav class="header-nav">
+            <ul class="header-nav__list">
+              <li class="header-nav__item"><a href="" class="header-nav__link">О нас</a></li>
+              <li class="header-nav__item"><a href="" class="header-nav__link">Галерея</a></li>
+              <li class="header-nav__item"><a href="" class="header-nav__link">Каталог</a></li>
+              <li class="header-nav__item"><a href="" class="header-nav__link">События</a></li>
+              <li class="header-nav__item"><a href="" class="header-nav__link">Издания</a></li>
+              <li class="header-nav__item"><a href="" class="header-nav__link">Проекты</a></li>
+              <li class="header-nav__item"><a href="" class="header-nav__link">Контакты</a></li>
+            </ul>
+          </nav>
+          <a href="" class="comein">
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="header-path"
+                d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
+                fill="#fff" />
+            </svg>
+            Войти</a>
+          <button class="header__search">Поиск</button>
+
+        </div>
+      </div>
+      <div class="bgd-png ">
+        <div class="container dropdown-box">
+          <div class="dropdown">
+            <button class="dropbtn">Реализм
+              <span class="one-icon"></span>
+              <span class="two-icon"></span>
+            </button>
+            <ul id="1" class="dropdown-content">
+              <li class="dropdown-item dropdown-item-img1"><a href="" class="dropdown-link">Тинторетто</a></li>
+              <li class="dropdown-item dropdown-item-img2"><a href="" class="dropdown-link">Фридрих</a></li>
+              <li class="dropdown-item dropdown-item-img3"><a href="" class="dropdown-link">Леонардо</a></li>
+              <li class="dropdown-item dropdown-item-img4"><a href="" class="dropdown-link">Верроккьо</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Импрессионизм
+              <span class="one-icon"></span>
+              <span class="two-icon"></span>
+            </button>
+            <ul id="2" class="dropdown-content">
+              <li class="dropdown-item dropdown-item-img5"><a href="" class="dropdown-link">Моне</a></li>
+              <li class="dropdown-item dropdown-item-img6"><a href="" class="dropdown-link">Сислей</a></li>
+              <li class="dropdown-item dropdown-item-img7"><a href="" class="dropdown-link">Мане</a></li>
+              <li class="dropdown-item dropdown-item-img8"><a href="" class="dropdown-link">Ренуар</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Постимпрессионизм
+              <span class="one-icon"></span>
+              <span class="two-icon"></span>
+            </button>
+            <ul id="3" class="dropdown-content">
+              <li class="dropdown-item dropdown-item-img9"><a href="" class="dropdown-link">Ван Гог</a></li>
+              <li class="dropdown-item dropdown-item-img10"><a href="" class="dropdown-link">Сезанн</a></li>
+              <li class="dropdown-item dropdown-item-img11"><a href="" class="dropdown-link">Гоген</a></li>
+              <li class="dropdown-item dropdown-item-img12"><a href="" class="dropdown-link">Сёра</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Авангард
+              <span class="one-icon"></span>
+              <span class="two-icon"></span>
+            </button>
+            <ul id="4" class="dropdown-content">
+              <li class="dropdown-item dropdown-item-img13"><a href="" class="dropdown-link">Кандинский</a></li>
+              <li class="dropdown-item dropdown-item-img14"><a href="" class="dropdown-link">Маринетти</a></li>
+              <li class="dropdown-item dropdown-item-img15"><a href="" class="dropdown-link">Малевич</a></li>
+              <li class="dropdown-item dropdown-item-img16"><a href="" class="dropdown-link">Пикассо</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Футуризм
+              <span class="one-icon"></span>
+              <span class="two-icon"></span>
+            </button>
+            <ul id="5" class="dropdown-content">
+              <li class="dropdown-item dropdown-item-img17"><a href="" class="dropdown-link">Карра</a></li>
+              <li class="dropdown-item dropdown-item-img18"><a href="" class="dropdown-link">Прателла</a></li>
+              <li class="dropdown-item dropdown-item-img19"><a href="" class="dropdown-link">Северини</a></li>
+              <li class="dropdown-item dropdown-item-img20"><a href="" class="dropdown-link">Балла</a></li>
+            </ul>
+          </div>
+          <div class="box-input">
+            <input type="text" class="header-desctop-block__search">
+          </div>
+        </div>
       </div>
     </header>
+    <section class="hero">
+
+
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Прикоснитесь к&nbsp;прекрасному
+          </h1>
+          <p class="hero-text bold-700">
+            Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых
+            предложений.
+          </p>
+          <a href="" class="hero-btn">
+            Подписаться на рассылку
+          </a>
+        </div>
+        </div>
+      <!-- Slider main container -->
+      <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide hero-img"></div>
+          <div class="swiper-slide hero-img2"></div>
+          <div class="swiper-slide hero-img3"></div>
+
+        </div>
+      </div>
+    </section>
   </div>
+
 </body>
 
 </html>
