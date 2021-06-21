@@ -32,7 +32,7 @@ function hideShowBlock(e, i) {
 // функция которая закроет все выподающие списки(если они открыты) в header при клике в любом месте документа кроме кнопок 'dropbtn' .
 window.onclick = function (event) {
   if (!event.target.matches('.dropbtn')) {
-    const dropdowns = document.getElementsByClassName('dropdown-content');
+    const dropdowns = document.getElementsByClassName('dropdown-content-box');
     const buttons = document.querySelectorAll('.dropbtn');
 
     for (let i = 0; i < dropdowns.length; i++) {

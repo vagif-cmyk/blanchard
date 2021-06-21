@@ -306,15 +306,20 @@ body {
   transition: .2s;
 }
 
-.dropdown-content {
+.dropdown-content-box {
   display: none;
   position: absolute;
   top: 100%;
   padding: 40px 40px 20px;
   background: url(../img/head/bgd-png2.png);
   z-index: 1;
+  
   animation-name: show-drop;
   animation-duration: 400ms;
+}
+.dropdown-content {
+  width: 220px;
+  max-height: 300px;
 }
 
 .dropdown-item {
@@ -431,6 +436,7 @@ body {
   height: 100%;
   padding: 12px 14px;
   color: #fff;
+  outline: none;
   transition: .2s;
 }
 
@@ -488,7 +494,7 @@ body {
   transform: rotate(45deg);
 }
 
-.dropdown-item::after {
+.dropdown-link::after {
   content: '';
   position: absolute;
   right: 0;
@@ -496,16 +502,26 @@ body {
   bottom: 0;
   height: 100%;
   background: #C283F3;
-  outline: solid 2px #C283F3;
+  opacity: 0;
+  transition: .2s;
+}
+.dropdown-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border: solid 2px #C283F3;
   opacity: 0;
   transition: .2s;
 }
 
-.dropdown-item:hover, .dropdown-link:focus {
-  outline: 2px solid #9D5CD0;
+.dropdown-link:hover::before, .dropdown-link:focus::before {
+  opacity: 1;
 }
 
-.dropdown-item:active::after {
+.dropdown-link:active::after {
   opacity: 0.4;
 }
 
@@ -561,6 +577,28 @@ body {
   display: block;
 }
 
+/* simplebar */
+.simplebar-scrollbar:before {
+  height: 28px;
+  border-radius: 0;
+  background: #fff;
+}
+.simplebar-scrollbar.simplebar-visible:before {
+  opacity: 1;
+
+}
+.simplebar-track.simplebar-vertical {
+  right: -20px;
+  width: 6px;
+  background: #000;
+
+}
+.simplebar-track.simplebar-horizontal {
+  display: none;
+
+}
+
+/* keyframes */
 @keyframes show-drop {
   0% {
     opacity: 0;
@@ -572,7 +610,7 @@ body {
   }
 }
 
-@keyframes hide-drop {
+/* @keyframes hide-drop {
   0% {
     opacity: 1;
     transform: translate(0, -20px);
@@ -581,4 +619,4 @@ body {
     opacity: 0;
     transform: translate(0, 0);
   }
-}
+} */

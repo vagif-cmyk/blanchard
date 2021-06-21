@@ -4,6 +4,10 @@
   width: 38%;
 }
 
+.swiper-slide-active {
+  animation: zoom 8s alternate ease-in-out infinite;
+}
+
 .hero-img {
   background: url(../img/hero/hero.jpg) center / cover no-repeat;
 }
@@ -86,4 +90,13 @@
   border: solid 3px #fff;
   border-radius: 100px;
   opacity: 0;
+}
+
+@keyframes zoom {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: scale(1.1, 1.1);
+  }
 }
