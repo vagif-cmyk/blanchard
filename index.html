@@ -15,15 +15,12 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Google fonts API  -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
-    rel="stylesheet">
-
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/simplebar.css">
   <link rel="stylesheet" href="./css/head.css">
   <link rel="stylesheet" href="./css/hero.css">
+  <link rel="stylesheet" href="./css/about.css">
+  <link rel="stylesheet" href="./css/gallery.css">
   <link rel="stylesheet" href="./css/media.css">
   <script defer src="./scripts/main.js"></script>
 
@@ -32,10 +29,7 @@
 </head>
 
 <body>
-
-  <div class="box-slider">
     <header class="header">
-
       <div class="bgd-black">
         <div class="container header__content">
           <div class="burger">
@@ -62,124 +56,168 @@
                 fill="#fff" />
             </svg>
             Войти</a>
-          <button class="header__search">Поиск</button>
-
+          <button class="header__search-mob">Поиск</button>
         </div>
       </div>
       <div class="bgd-png ">
         <div class="container dropdown-box">
           <div class="dropdown">
             <button class="dropbtn">Реализм
-              <span class="one-icon"></span>
-              <span class="two-icon"></span>
+              <span class="dropbtn__icon1"></span>
+              <span class="dropbtn__icon2"></span>
             </button>
-            <div id="1" class="dropdown-content-box">
-              <ul class="dropdown-content" data-simplebar>
-                <li class="dropdown-item dropdown-item-img1"><a href="" class="dropdown-link">Тинторетто</a></li>
-                <li class="dropdown-item dropdown-item-img2"><a href="" class="dropdown-link">Фридрих</a></li>
-                <li class="dropdown-item dropdown-item-img3"><a href="" class="dropdown-link">Леонардо</a></li>
-                <li class="dropdown-item dropdown-item-img4"><a href="" class="dropdown-link">Верроккьо</a></li>
+            <div id="1" class="dropdown__content-box">
+              <ul class="dropdown__content" data-simplebar>
+                <li class="dropdown__item dropdown__item-img1"><a href="" class="dropdown__link">Тинторетто</a></li>
+                <li class="dropdown__item dropdown__item-img2"><a href="" class="dropdown__link">Фридрих</a></li>
+                <li class="dropdown__item dropdown__item-img3"><a href="" class="dropdown__link">Леонардо</a></li>
+                <li class="dropdown__item dropdown__item-img4"><a href="" class="dropdown__link">Верроккьо</a></li>
 
                 <!-- Если нужно протестить работу скролла, раскомментировать ниже  -->
 
-                <!-- <li class="dropdown-item dropdown-item-img4"><a href="" class="dropdown-link">Верроккьо</a></li>
-                <li class="dropdown-item dropdown-item-img4"><a href="" class="dropdown-link">Верроккьо</a></li>
-                <li class="dropdown-item dropdown-item-img4"><a href="" class="dropdown-link">Верроккьо</a></li>
-                <li class="dropdown-item dropdown-item-img4"><a href="" class="dropdown-link">Верроккьо</a></li> -->
+                <li class="dropdown__item dropdown__item-img4"><a href="" class="dropdown__link">Верроккьо</a></li>
+                <li class="dropdown__item dropdown__item-img4"><a href="" class="dropdown__link">Верроккьо</a></li>
+                <li class="dropdown__item dropdown__item-img4"><a href="" class="dropdown__link">Верроккьо</a></li>
+                <li class="dropdown__item dropdown__item-img4"><a href="" class="dropdown__link">Верроккьо</a></li>
               </ul>
             </div>
           </div>
           <div class="dropdown">
             <button class="dropbtn">Импрессионизм
-              <span class="one-icon"></span>
-              <span class="two-icon"></span>
+              <span class="dropbtn__icon1"></span>
+              <span class="dropbtn__icon2"></span>
             </button>
-            <div id="2" class="dropdown-content-box">
-              <ul class="dropdown-content">
-                <li class="dropdown-item dropdown-item-img5"><a href="" class="dropdown-link">Моне</a></li>
-                <li class="dropdown-item dropdown-item-img6"><a href="" class="dropdown-link">Сислей</a></li>
-                <li class="dropdown-item dropdown-item-img7"><a href="" class="dropdown-link">Мане</a></li>
-                <li class="dropdown-item dropdown-item-img8"><a href="" class="dropdown-link">Ренуар</a></li>
+            <div id="2" class="dropdown__content-box">
+              <ul class="dropdown__content">
+                <li class="dropdown__item dropdown__item-img5"><a href="" class="dropdown__link">Моне</a></li>
+                <li class="dropdown__item dropdown__item-img6"><a href="" class="dropdown__link">Сислей</a></li>
+                <li class="dropdown__item dropdown__item-img7"><a href="" class="dropdown__link">Мане</a></li>
+                <li class="dropdown__item dropdown__item-img8"><a href="" class="dropdown__link">Ренуар</a></li>
               </ul>
             </div>
           </div>
           <div class="dropdown">
             <button class="dropbtn">Постимпрессионизм
-              <span class="one-icon"></span>
-              <span class="two-icon"></span>
+              <span class="dropbtn__icon1"></span>
+              <span class="dropbtn__icon2"></span>
             </button>
-            <div id="3" class="dropdown-content-box">
-              <ul class="dropdown-content">
-                <li class="dropdown-item dropdown-item-img9"><a href="" class="dropdown-link">Ван Гог</a></li>
-                <li class="dropdown-item dropdown-item-img10"><a href="" class="dropdown-link">Сезанн</a></li>
-                <li class="dropdown-item dropdown-item-img11"><a href="" class="dropdown-link">Гоген</a></li>
-                <li class="dropdown-item dropdown-item-img12"><a href="" class="dropdown-link">Сёра</a></li>
+            <div id="3" class="dropdown__content-box">
+              <ul class="dropdown__content">
+                <li class="dropdown__item dropdown__item-img9"><a href="" class="dropdown__link">Ван Гог</a></li>
+                <li class="dropdown__item dropdown__item-img10"><a href="" class="dropdown__link">Сезанн</a></li>
+                <li class="dropdown__item dropdown__item-img11"><a href="" class="dropdown__link">Гоген</a></li>
+                <li class="dropdown__item dropdown__item-img12"><a href="" class="dropdown__link">Сёра</a></li>
               </ul>
             </div>
           </div>
           <div class="dropdown">
             <button class="dropbtn">Авангард
-              <span class="one-icon"></span>
-              <span class="two-icon"></span>
+              <span class="dropbtn__icon1"></span>
+              <span class="dropbtn__icon2"></span>
             </button>
-            <div id="4" class="dropdown-content-box">
-              <ul class="dropdown-content">
-                <li class="dropdown-item dropdown-item-img13"><a href="" class="dropdown-link">Кандинский</a></li>
-                <li class="dropdown-item dropdown-item-img14"><a href="" class="dropdown-link">Маринетти</a></li>
-                <li class="dropdown-item dropdown-item-img15"><a href="" class="dropdown-link">Малевич</a></li>
-                <li class="dropdown-item dropdown-item-img16"><a href="" class="dropdown-link">Пикассо</a></li>
+            <div id="4" class="dropdown__content-box">
+              <ul class="dropdown__content">
+                <li class="dropdown__item dropdown__item-img13"><a href="" class="dropdown__link">Кандинский</a></li>
+                <li class="dropdown__item dropdown__item-img14"><a href="" class="dropdown__link">Маринетти</a></li>
+                <li class="dropdown__item dropdown__item-img15"><a href="" class="dropdown__link">Малевич</a></li>
+                <li class="dropdown__item dropdown__item-img16"><a href="" class="dropdown__link">Пикассо</a></li>
               </ul>
             </div>
           </div>
           <div class="dropdown">
             <button class="dropbtn">Футуризм
-              <span class="one-icon"></span>
-              <span class="two-icon"></span>
+              <span class="dropbtn__icon1"></span>
+              <span class="dropbtn__icon2"></span>
             </button>
-            <div id="5" class="dropdown-content-box">
-              <ul class="dropdown-content">
-                <li class="dropdown-item dropdown-item-img17"><a href="" class="dropdown-link">Карра</a></li>
-                <li class="dropdown-item dropdown-item-img18"><a href="" class="dropdown-link">Прателла</a></li>
-                <li class="dropdown-item dropdown-item-img19"><a href="" class="dropdown-link">Северини</a></li>
-                <li class="dropdown-item dropdown-item-img20"><a href="" class="dropdown-link">Балла</a></li>
+            <div id="5" class="dropdown__content-box">
+              <ul class="dropdown__content">
+                <li class="dropdown__item dropdown__item-img17"><a href="" class="dropdown__link">Карра</a></li>
+                <li class="dropdown__item dropdown__item-img18"><a href="" class="dropdown__link">Прателла</a></li>
+                <li class="dropdown__item dropdown__item-img19"><a href="" class="dropdown__link">Северини</a></li>
+                <li class="dropdown__item dropdown__item-img20"><a href="" class="dropdown__link">Балла</a></li>
               </ul>
             </div>
           </div>
-          <div class="box-input">
-            <input type="text" class="header-desctop-block__search">
-          </div>
+          <!-- 1 -->
+          <form class="header__form" action="https://jsonplaceholder.typicode.com/posts" method="GET">
+            <button type="submit" class="header__form-btn">
+              <svg width="30" height="29" viewBox="0 0 30 29" fill="" xmlns="http://www.w3.org/2000/svg">
+                <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="white"/>
+                </svg>
+            </button>
+            <input type="text" placeholder="Поиск по сайту" class="header__search">
+            <!-- 1 -->
+
+          </form>
         </div>
       </div>
     </header>
     <section class="hero">
       <div class="container">
-        <div class="hero-content">
-          <h1 class="hero-title">
+        <div class="hero__content">
+          <h1 class="hero__title">
             Прикоснитесь к&nbsp;прекрасному
           </h1>
-          <p class="hero-text bold-700">
+          <p class="hero__text bold-700">
             Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых
             предложений.
           </p>
-          <a href="" class="hero-btn">
+          <a href="" class="hero__btn">
             Подписаться на рассылку
           </a>
         </div>
       </div>
       <!-- Slider main container -->
-      <div class="swiper-container">
+      <div class="swiper-container hero__bg-img">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->
-          <div class="swiper-slide hero-img"></div>
-          <div class="swiper-slide hero-img2"></div>
-          <div class="swiper-slide hero-img3"></div>
+          <div class="swiper-slide hero__img"></div>
+          <div class="swiper-slide hero__img2"></div>
+          <div class="swiper-slide hero__img3"></div>
+        </div>
+      </div>
+    </section>
+  <main class="main">
+    <div class="container">
+      <section class="about about-m">
+        <h2 class="about__title regular-48">
+          О нас
+        </h2>
+        <p class="about__text regular-16">
+          Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого
+          участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов.
+          Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс
+          внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных
+          исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с
+          учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов,
+          действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны
+          быть разоблачены.
+        </p>
+      </section>
+    </div>
+    <section class="gallery">
+      <div class="container box-gallery">
+        <div class="gallery__filter">
+          <h2 class="gallery__title regular-48">Галерея</h2>
+          <div class="sel-desc">Фильтр:</div>
+          <select class="gallery__select">
+            <option value="" class="gallery__option">Живопись</option>
+            <option value="" class="gallery__option">Скульптура</option>
+            <option value="" class="gallery__option">Рисунок</option>
+          </select>
+          <p class="gallery__text">
+            Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a href=""
+              class="reg">авторизуйтесь</a>, либо воспользуйтесь лицензией.
+          </p>
+        </div>
+        <div class="gallery__slider">
 
         </div>
       </div>
     </section>
-  </div>
-
+  </main>
 </body>
 
 </html>

@@ -1,0 +1,110 @@
+.gallery {
+  padding: 80px 0;
+  color: #fff;
+  background: url(../img/gallery/gallery-b.jpg) center / cover no-repeat;
+  background-color: #333;
+}
+
+.gallery__title .gallery__text {
+  margin: 0;
+}
+
+.sel-desc {
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* select */
+
+.choices {
+  width: 400px;
+  transition: .2s;
+}
+.choices__list--dropdown {
+  width: 400px;
+  background: transparent;
+  border: none;
+}
+.choices:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.choices__inner {
+  width: 400px;
+  padding: 0;
+  background: transparent;
+  border: solid 1px #fff;
+  border-radius: 8px;
+}
+.choices__list--single {
+  padding: 0;
+}
+.choices[data-type*=select-one] .choices__inner {
+  padding: 0;
+}
+.choices__placeholder {
+  padding: 4px 0 4px 15px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #fff;
+  opacity: 1;
+}
+
+.choices__list--dropdown .choices__item--selectable {
+  padding: 4px 0 4px 15px;
+  color: #999;
+}
+.is-open .choices__inner {
+  border-radius: 8px;
+}
+
+[role="option"][data-id="1"] {
+  display: none;
+}
+
+[role="option"][data-id="2"] {
+  border: solid 1px #999;
+  border-bottom: none;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+[role="option"][data-id="3"] {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border: solid 1px #999;
+}
+.choices[data-type*="select-one"]::after {
+  display: none;
+}
+.choices[data-type*="select-one"]::before {
+  content: url('../img/gallery/mark.svg');
+  position: absolute;
+  top: 16px;
+  left: 370px;
+  transform: rotate(180deg);
+  transition: .2s;
+}
+.choices[data-type*="select-one"].is-open::before {
+  top: 12px;
+  transform: none;
+}
+.box-gallery {
+  display: flex;
+  justify-content: space-between;
+}
+.gallery__filter {
+  display: flex;
+  flex-direction: column;
+
+}
+.gallery__text {
+margin-top: 100%;
+}

@@ -1,0 +1,18 @@
+/* section about  */
+
+.about {
+  width: 68%;
+}
+
+.about-m {
+  margin: 55px 0 80px;
+}
+
+.about__title, .about-text {
+  margin: 0;
+  color: #333;
+}
+
+.about__title {
+  margin-bottom: 30px;
+}

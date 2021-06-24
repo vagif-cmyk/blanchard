@@ -1,46 +1,55 @@
 /* hero  */
 
-.hero-content {
-  width: 38%;
+.hero {
+  position: relative;
+  padding-top: 187px;
+  background: #333;
+  overflow: hidden;
 }
 
-.swiper-slide-active {
-  animation: zoom 8s alternate ease-in-out infinite;
+.hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 610px;
+  padding: 63px 0 122px 0;
 }
 
-.hero-img {
+.hero__img {
   background: url(../img/hero/hero.jpg) center / cover no-repeat;
 }
 
-.hero-img2 {
+.hero__img2 {
   background: url(../img/hero/hero2.jpg) center / cover no-repeat;
 }
 
-.hero-img3 {
+.hero__img3 {
   background: url(../img/hero/hero3.jpg) center / cover no-repeat;
 }
 
-.swiper-container {
+.hero__bg-img {
   position: absolute;
-  top: 100px;
-  z-index: -1;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 800px;
+  height: 100%;
+  animation: zoom 8s alternate ease-in-out infinite;
+
 }
 
-.hero-title {
-  font-style: 700px;
+.hero__title {
+  margin: 0;
+  font-weight: 700;
   font-size: 72px;
-  line-height: 82px;
+  line-height: 98px;
   color: #fff;
 }
 
-.hero-text {
-  margin-bottom: 82px;
+.hero__text {
+  margin: 0 0 112px 0;
   color: #fff;
 }
 
-.hero-btn {
+.hero__btn {
   position: relative;
   padding: 22px 35px;
   font-weight: 700;
@@ -53,33 +62,33 @@
   transition: .2s;
 }
 
-.hero-btn:focus {
+.hero__btn:focus {
   outline: none;
   border: solid 2px #C283F3;
 }
 
-.hero-btn:focus::after {
+.hero__btn:focus::after {
   opacity: 1;
 }
 
-.hero-btn:hover {
+.hero__btn:hover {
   border: solid 3px #D1A9F0;
 }
 
-.hero-btn:hover::after {
+.hero__btn:hover::after {
   opacity: 0;
 }
 
-.hero-btn:active {
+.hero__btn:active {
   background: var(--colorViolet);
   border: solid 3px #D1A9F0;
 }
 
-.hero-btn:active::after {
+.hero__btn:active::after {
   opacity: 0;
 }
 
-.hero-btn::after {
+.hero__btn::after {
   position: absolute;
   top: 0;
   left: 0;

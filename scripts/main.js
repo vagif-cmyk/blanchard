@@ -1,7 +1,8 @@
 
 document.querySelectorAll('.dropbtn').forEach((e, i) => {
   e.addEventListener('click', () => hideShowBlock(e, i));
-})
+});
+
 // функция которая при клике на кнопку показывает или скрывает выподающий список.
 function hideShowBlock(e, i) {
   switch (i + 1) {
@@ -32,7 +33,7 @@ function hideShowBlock(e, i) {
 // функция которая закроет все выподающие списки(если они открыты) в header при клике в любом месте документа кроме кнопок 'dropbtn' .
 window.onclick = function (event) {
   if (!event.target.matches('.dropbtn')) {
-    const dropdowns = document.getElementsByClassName('dropdown-content-box');
+    const dropdowns = document.getElementsByClassName('dropdown__content-box');
     const buttons = document.querySelectorAll('.dropbtn');
 
     for (let i = 0; i < dropdowns.length; i++) {
@@ -47,17 +48,21 @@ window.onclick = function (event) {
 }
 
 // swiper
-const swiper = new Swiper('.swiper-container', {
+const swiper = new Swiper('.hero__bg-img', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
-
+  speed: 1800,
+  // autoplay
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: true,
+  },
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
   },
-
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
@@ -68,4 +73,13 @@ const swiper = new Swiper('.swiper-container', {
   scrollbar: {
     el: '.swiper-scrollbar',
   },
+});
+
+// селект
+const element = document.querySelector('select');
+
+const choices = new Choices(element, {
+  searchEnabled: false,
+  itemSelectText: '',
+  position: 'bottom'
 });
