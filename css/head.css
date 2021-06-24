@@ -468,7 +468,7 @@ button {
   background-size: cover;
 }
 
-.dropdown-link {
+.dropdown__link {
   display: block;
   height: 100%;
   padding: 12px 14px;
@@ -531,7 +531,7 @@ button {
   transform: rotate(45deg);
 }
 
-.dropdown-link::after {
+.dropdown__link::after {
   content: '';
   position: absolute;
   right: 0;
@@ -543,7 +543,7 @@ button {
   transition: .2s;
 }
 
-.dropdown-link::before {
+.dropdown__link::before {
   content: '';
   position: absolute;
   top: 0;
@@ -555,11 +555,11 @@ button {
   transition: .2s;
 }
 
-.dropdown-link:hover::before, .dropdown-link:focus::before {
+.dropdown__link:hover::before, .dropdown__link:focus::before {
   opacity: 1;
 }
 
-.dropdown-link:active::after {
+.dropdown__link:active::after {
   opacity: 0.4;
 }
 
