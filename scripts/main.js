@@ -1,35 +1,64 @@
 
+document.querySelector('.burger').addEventListener('click', () => openMenu());
+document.querySelector('.header-nav__close').addEventListener('click', () => closeMenu());
+
 document.querySelectorAll('.dropbtn').forEach((e, i) => {
   e.addEventListener('click', () => hideShowBlock(e, i));
 });
 
-// функция которая при клике на кнопку показывает или скрывает выподающий список.
+// функция которая откроет меню.
+function openMenu() {
+  document.querySelector('.header-nav').classList.add('is-open');
+  document.querySelector('.comein').classList.add('is-open');
+}
+
+// функция которая закроет меню.
+function closeMenu() {
+  document.querySelector('.header-nav').classList.remove('is-open');
+  document.querySelector('.comein').classList.remove('is-open');
+}
+
+// функция которая показывает или скрывает выподающий список.
 function hideShowBlock(e, i) {
+  hideBlocks('.dropdown__content-box.display-b', i);
+
   switch (i + 1) {
     case 1:
       e.classList.toggle('is-open');
-      document.getElementById('1').classList.toggle('display-b');
+      document.querySelector(".dropdown__content-box[data-path='1']").classList.toggle('display-b');
       break;
     case 2:
       e.classList.toggle('is-open');
-      document.getElementById('2').classList.toggle('display-b');
+      document.querySelector(".dropdown__content-box[data-path='2']").classList.toggle('display-b');
       break;
     case 3:
       e.classList.toggle('is-open');
-      document.getElementById('3').classList.toggle('display-b');
+      document.querySelector(".dropdown__content-box[data-path='3']").classList.toggle('display-b');
       break;
     case 4:
       e.classList.toggle('is-open');
-      document.getElementById('4').classList.toggle('display-b');
+      document.querySelector(".dropdown__content-box[data-path='4']").classList.toggle('display-b');
       break;
     case 5:
       e.classList.toggle('is-open');
-      document.getElementById('5').classList.toggle('display-b');
+      document.querySelector(".dropdown__content-box[data-path='5']").classList.toggle('display-b');
       break;
     default:
       alert('WTF ?');
   }
 }
+// функция которая закроет все открытые dropdown-ы.
+function hideBlocks(str, i) {
+  document.querySelectorAll('.is-open').forEach((e) => {
+    if (!(e.dataset.path === String(i + 1)))
+      e.classList.remove('is-open');
+  });
+  document.querySelectorAll(str).forEach((e) => {
+    if (!(e.dataset.path === String(i + 1)))
+      e.classList.remove('display-b');
+  });
+}
+
 // функция которая закроет все выподающие списки(если они открыты) в header при клике в любом месте документа кроме кнопок 'dropbtn' .
 window.onclick = function (event) {
   if (!event.target.matches('.dropbtn')) {
@@ -76,10 +105,10 @@ const swiper = new Swiper('.hero__bg-img', {
 });
 
 // селект
-const element = document.querySelector('select');
+// const element = document.querySelector('select');
 
-const choices = new Choices(element, {
-  searchEnabled: false,
-  itemSelectText: '',
-  position: 'bottom'
-});
+// const choices = new Choices(element, {
+//   searchEnabled: false,
+//   itemSelectText: '',
+//   position: 'bottom'
+// });

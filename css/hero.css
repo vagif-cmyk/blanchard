@@ -38,6 +38,7 @@
 
 .hero__title {
   margin: 0;
+  word-wrap: break-word;
   font-weight: 700;
   font-size: 72px;
   line-height: 98px;
@@ -51,7 +52,10 @@
 
 .hero__btn {
   position: relative;
+  display: inline-block;
   padding: 22px 35px;
+  text-align: center;
+  word-wrap: break-word;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;

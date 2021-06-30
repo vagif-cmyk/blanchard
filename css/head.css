@@ -119,101 +119,28 @@ button {
   border: none;
   background: transparent;
 }
-
-.burger .burger__span, .burger .burger__span::before, .burger .burger__span::after {
+ .burger__icon, .burger__icon::before, .burger__icon::after {
   position: absolute;
   top: 50%;
   left: 50%;
   height: 3px;
   margin-top: -1px;
-  margin-left: -15px;
+  margin-left: -14px;
   background-color: #fff;
 }
-
-.burger .burger__span {
+ .burger__icon {
   width: 28px;
 }
-
-.burger .burger__span::before, .burger .burger__span::after {
+ .burger__icon::before, .burger__icon::after {
   content: '';
 }
-
-.burger .burger__span::before {
+ .burger__icon::before {
   width: 36px;
-  transform: translateY(-8px);
+  transform: translateY(-9px);
 }
-
-.burger .burger__span::after {
+ .burger__icon::after {
   width: 24px;
   transform: translateY(8px);
-}
-
-.burger-active .burger__span::after {
-  transition: .2s;
-  transform: rotate(45deg);
-}
-
-.burger-active .burger__span::before {
-  transition: .2s;
-  transform: rotate(-45deg);
-}
-
-/* section checkbox         !!!!!!!!!!!!!   переделать под макет     !!!!!!!!!!*/
-
-.checkbox {
-  width: 176px;
-  padding: 21px 10px 20px 30px;
-  background-color: #fff;
-  border-radius: 10px;
-}
-
-.checkbox__title {
-  margin: 0 auto;
-  padding-bottom: 20px;
-}
-
-.checkbox__item {
-  padding-bottom: 20px;
-}
-
-.checkbox__label {
-  position: relative;
-  padding-left: 24px;
-  color: #333;
-  cursor: pointer;
-}
-
-.checkbox__check {
-  display: none;
-}
-
-.checkbox__span {
-  position: absolute;
-  left: 0;
-  width: 15px;
-  height: 15px;
-  text-align: center;
-  border: 1px solid #999;
-  border-radius: 3px;
-  transition: border .2s ease-in-out;
-}
-
-.checkbox__span::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  transition: opacity .2s ease-in-out;
-}
-
-.checkbox__check:checked+.checkbox__span::before {
-  opacity: 1;
-}
-
-.checkbox__check:checked+.checkbox__span {
-  border: 1px solid #CCB26E;
 }
 
 /* variable */
@@ -229,7 +156,7 @@ button {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
 }
 
@@ -264,10 +191,38 @@ button {
 
 .header-nav__list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .header-nav__list :not(:last-child) {
   margin-right: 56px;
+}
+
+.header-nav__close {
+  display: none;
+  position: absolute;
+  left: 50px;
+  top: 30px;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+}
+
+.header-nav__close:before, .header-nav__close:after {
+  position: absolute;
+  left: 20px;
+  content: '';
+  height: 38px;
+  width: 4px;
+  background-color: #fff;
+}
+
+.header-nav__close:before {
+  transform: rotate(45deg);
+}
+
+.header-nav__close:after {
+  transform: rotate(-45deg);
 }
 
 .header-nav__item {
@@ -318,10 +273,12 @@ button {
 
 .header__search-mob {
   display: none;
+  background: transparent;
 }
 
 .dropdown-box {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -330,6 +287,10 @@ button {
   display: block;
   margin-right: 96px;
   padding: 28px 0;
+}
+
+.last-dropdown {
+  margin: 0;
 }
 
 .dropbtn {
@@ -346,10 +307,13 @@ button {
   display: none;
   position: absolute;
   top: 100%;
-  z-index: 3;
+  z-index: 2;
   padding: 40px 40px 20px;
   background: url(../img/head/bgd-png2.png);
   overflow: auto;
+}
+
+.dropdown__content-box.display-b {
   animation-name: show-drop;
   animation-duration: 400ms;
 }
@@ -563,6 +527,10 @@ button {
   opacity: 0.4;
 }
 
+.form-box {
+  margin-left: auto;
+}
+
 .header__search {
   padding-bottom: 6px;
   color: #fff;
@@ -586,7 +554,6 @@ button {
 
 .header__form {
   position: relative;
-  margin-left: auto;
   cursor: pointer;
 }
 
@@ -672,14 +639,19 @@ button {
     transform: translate(0, 0);
   }
 }
-
-/* @keyframes hide-drop {
+@keyframes open-menu {
   0% {
-    opacity: 1;
-    transform: translate(0, -20px);
+  transform: translateX(-1000px);
   }
   100% {
-    opacity: 0;
-    transform: translate(0, 0);
+    transform: translateX(0);
   }
-} */
+}
+@keyframes close-menu {
+  0% {
+  transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1000px);
+  }
+}

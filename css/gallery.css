@@ -5,7 +5,7 @@
   background-color: #333;
 }
 
-.gallery__title .gallery__text {
+.gallery__title, .gallery__text {
   margin: 0;
 }
 
@@ -22,11 +22,13 @@
   width: 400px;
   transition: .2s;
 }
+
 .choices__list--dropdown {
   width: 400px;
   background: transparent;
   border: none;
 }
+
 .choices:hover {
   background: rgba(255, 255, 255, 0.2);
 }
@@ -42,12 +44,15 @@
   border: solid 1px #fff;
   border-radius: 8px;
 }
+
 .choices__list--single {
   padding: 0;
 }
+
 .choices[data-type*=select-one] .choices__inner {
   padding: 0;
 }
+
 .choices__placeholder {
   padding: 4px 0 4px 15px;
   font-weight: 400;
@@ -58,9 +63,10 @@
 }
 
 .choices__list--dropdown .choices__item--selectable {
-  padding: 4px 0 4px 15px;
+  padding: 4px 4px 4px 15px;
   color: #999;
 }
+
 .is-open .choices__inner {
   border-radius: 8px;
 }
@@ -81,9 +87,11 @@
   border-bottom-right-radius: 8px;
   border: solid 1px #999;
 }
+
 .choices[data-type*="select-one"]::after {
   display: none;
 }
+
 .choices[data-type*="select-one"]::before {
   content: url('../img/gallery/mark.svg');
   position: absolute;
@@ -92,19 +100,32 @@
   transform: rotate(180deg);
   transition: .2s;
 }
+
 .choices[data-type*="select-one"].is-open::before {
   top: 12px;
   transform: none;
 }
+
 .box-gallery {
   display: flex;
   justify-content: space-between;
 }
+
 .gallery__filter {
   display: flex;
   flex-direction: column;
-
 }
+
 .gallery__text {
-margin-top: 100%;
+  margin-top: 100%;
+}
+
+/* swiper */
+
+.gallery__bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

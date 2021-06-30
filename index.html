@@ -9,150 +9,157 @@
 
   <!-- choises API -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 
   <!-- swiper API -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-  <link rel="stylesheet" href="./css/normalize.css">
-  <link rel="stylesheet" href="./css/simplebar.css">
-  <link rel="stylesheet" href="./css/head.css">
-  <link rel="stylesheet" href="./css/hero.css">
-  <link rel="stylesheet" href="./css/about.css">
-  <link rel="stylesheet" href="./css/gallery.css">
-  <link rel="stylesheet" href="./css/media.css">
-  <script defer src="./scripts/main.js"></script>
+  <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
   <!-- simplebar API -->
+  <link rel="stylesheet" href="css/simplebar.css">
   <script defer src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/head.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/gallery.css">
+  <link rel="stylesheet" href="css/media.css">
+
+  <script defer src="scripts/main.js"></script>
+
 </head>
 
 <body>
-    <header class="header">
-      <div class="bgd-black">
-        <div class="container header__content">
-          <div class="burger">
-            <div class="burger__span"></div>
-          </div>
-          <a href="./index.html" class="logo">
-            <img src="./img/head/logo.svg" alt="Логотип. Художественная галерея">
-          </a>
-          <nav class="header-nav">
-            <ul class="header-nav__list">
-              <li class="header-nav__item"><a href="" class="header-nav__link">О нас</a></li>
-              <li class="header-nav__item"><a href="" class="header-nav__link">Галерея</a></li>
-              <li class="header-nav__item"><a href="" class="header-nav__link">Каталог</a></li>
-              <li class="header-nav__item"><a href="" class="header-nav__link">События</a></li>
-              <li class="header-nav__item"><a href="" class="header-nav__link">Издания</a></li>
-              <li class="header-nav__item"><a href="" class="header-nav__link">Проекты</a></li>
-              <li class="header-nav__item"><a href="" class="header-nav__link">Контакты</a></li>
+  <header class="header">
+    <div class="bgd-black">
+      <div class="container header__content">
+        <button class="burger">
+          <div class="burger__icon"></div>
+        </button>
+        <a class="logo" href="index.html">
+          <img src="img/head/logo.svg" alt="Логотип. Художественная галерея">
+        </a>
+        <nav class="header-nav">
+          <ul class="header-nav__list">
+            <li><button class="header-nav__close"></button></li>
+            <li class="header-nav__item"><a class="header-nav__link" href="">О нас</a></li>
+            <li class="header-nav__item"><a class="header-nav__link" href="">Галерея</a></li>
+            <li class="header-nav__item"><a class="header-nav__link" href="">Каталог</a></li>
+            <li class="header-nav__item"><a class="header-nav__link" href="">События</a></li>
+            <li class="header-nav__item"><a class="header-nav__link" href="">Издания</a></li>
+            <li class="header-nav__item"><a class="header-nav__link" href="">Проекты</a></li>
+            <li class="header-nav__item"><a class="header-nav__link" href="">Контакты</a></li>
+          </ul>
+        </nav>
+        <a class="comein" href="">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="header-path"
+              d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
+              fill="#fff" />
+          </svg>
+          Войти</a>
+        <button class="header__search-mob">
+          <svg width="27" height="27" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="9.15446" height="2.28862"
+              transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z"
+              fill="white" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="bgd-png ">
+      <ul class="dropdown-box container">
+        <li class="dropdown">
+          <button class="dropbtn" data-path="1">Реализм
+            <span class="dropbtn__icon1"></span>
+            <span class="dropbtn__icon2"></span>
+          </button>
+          <div class="dropdown__content-box" data-path="1">
+            <ul class="dropdown__content" data-simplebar>
+              <li class="dropdown__item dropdown__item-img1"><a class="dropdown__link" href="">Тинторетто</a></li>
+              <li class="dropdown__item dropdown__item-img2"><a class="dropdown__link" href="">Фридрих</a></li>
+              <li class="dropdown__item dropdown__item-img3"><a class="dropdown__link" href="">Леонардо</a></li>
+              <li class="dropdown__item dropdown__item-img4"><a class="dropdown__link" href="">Верроккьо</a></li>
             </ul>
-          </nav>
-          <a href="" class="comein">
-            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path class="header-path"
-                d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
-                fill="#fff" />
-            </svg>
-            Войти</a>
-          <button class="header__search-mob">Поиск</button>
-        </div>
-      </div>
-      <div class="bgd-png ">
-        <div class="container dropdown-box">
-          <div class="dropdown">
-            <button class="dropbtn">Реализм
-              <span class="dropbtn__icon1"></span>
-              <span class="dropbtn__icon2"></span>
-            </button>
-            <div id="1" class="dropdown__content-box">
-              <ul class="dropdown__content" data-simplebar>
-                <li class="dropdown__item dropdown__item-img1"><a href="" class="dropdown__link">Тинторетто</a></li>
-                <li class="dropdown__item dropdown__item-img2"><a href="" class="dropdown__link">Фридрих</a></li>
-                <li class="dropdown__item dropdown__item-img3"><a href="" class="dropdown__link">Леонардо</a></li>
-                <li class="dropdown__item dropdown__item-img4"><a href="" class="dropdown__link">Верроккьо</a></li>
-
-                <!-- Если нужно протестить работу скролла, раскомментировать ниже  -->
-
-                <li class="dropdown__item dropdown__item-img4"><a href="" class="dropdown__link">Верроккьо</a></li>
-                <li class="dropdown__item dropdown__item-img4"><a href="" class="dropdown__link">Верроккьо</a></li>
-                <li class="dropdown__item dropdown__item-img4"><a href="" class="dropdown__link">Верроккьо</a></li>
-                <li class="dropdown__item dropdown__item-img4"><a href="" class="dropdown__link">Верроккьо</a></li>
-              </ul>
-            </div>
           </div>
-          <div class="dropdown">
-            <button class="dropbtn">Импрессионизм
-              <span class="dropbtn__icon1"></span>
-              <span class="dropbtn__icon2"></span>
-            </button>
-            <div id="2" class="dropdown__content-box">
-              <ul class="dropdown__content">
-                <li class="dropdown__item dropdown__item-img5"><a href="" class="dropdown__link">Моне</a></li>
-                <li class="dropdown__item dropdown__item-img6"><a href="" class="dropdown__link">Сислей</a></li>
-                <li class="dropdown__item dropdown__item-img7"><a href="" class="dropdown__link">Мане</a></li>
-                <li class="dropdown__item dropdown__item-img8"><a href="" class="dropdown__link">Ренуар</a></li>
-              </ul>
-            </div>
+        </li>
+        <li class="dropdown">
+          <button class="dropbtn" data-path="2">Импрессионизм
+            <span class="dropbtn__icon1"></span>
+            <span class="dropbtn__icon2"></span>
+          </button>
+          <div class="dropdown__content-box" data-path="2">
+            <ul class="dropdown__content" data-simplebar>
+              <li class="dropdown__item dropdown__item-img5"><a class="dropdown__link" href="">Моне</a></li>
+              <li class="dropdown__item dropdown__item-img6"><a class="dropdown__link" href="">Сислей</a></li>
+              <li class="dropdown__item dropdown__item-img7"><a class="dropdown__link" href="">Мане</a></li>
+              <li class="dropdown__item dropdown__item-img8"><a class="dropdown__link" href="">Ренуар</a></li>
+            </ul>
           </div>
-          <div class="dropdown">
-            <button class="dropbtn">Постимпрессионизм
-              <span class="dropbtn__icon1"></span>
-              <span class="dropbtn__icon2"></span>
-            </button>
-            <div id="3" class="dropdown__content-box">
-              <ul class="dropdown__content">
-                <li class="dropdown__item dropdown__item-img9"><a href="" class="dropdown__link">Ван Гог</a></li>
-                <li class="dropdown__item dropdown__item-img10"><a href="" class="dropdown__link">Сезанн</a></li>
-                <li class="dropdown__item dropdown__item-img11"><a href="" class="dropdown__link">Гоген</a></li>
-                <li class="dropdown__item dropdown__item-img12"><a href="" class="dropdown__link">Сёра</a></li>
-              </ul>
-            </div>
+        </li>
+        <li class="dropdown">
+          <button class="dropbtn" data-path="3">Постимпрессионизм
+            <span class="dropbtn__icon1"></span>
+            <span class="dropbtn__icon2"></span>
+          </button>
+          <div class="dropdown__content-box" data-path="3">
+            <ul class="dropdown__content" data-simplebar>
+              <li class="dropdown__item dropdown__item-img9"><a class="dropdown__link" href="">Ван Гог</a></li>
+              <li class="dropdown__item dropdown__item-img10"><a class="dropdown__link" href="">Сезанн</a></li>
+              <li class="dropdown__item dropdown__item-img11"><a class="dropdown__link" href="">Гоген</a></li>
+              <li class="dropdown__item dropdown__item-img12"><a class="dropdown__link" href="">Сёра</a></li>
+            </ul>
           </div>
-          <div class="dropdown">
-            <button class="dropbtn">Авангард
-              <span class="dropbtn__icon1"></span>
-              <span class="dropbtn__icon2"></span>
-            </button>
-            <div id="4" class="dropdown__content-box">
-              <ul class="dropdown__content">
-                <li class="dropdown__item dropdown__item-img13"><a href="" class="dropdown__link">Кандинский</a></li>
-                <li class="dropdown__item dropdown__item-img14"><a href="" class="dropdown__link">Маринетти</a></li>
-                <li class="dropdown__item dropdown__item-img15"><a href="" class="dropdown__link">Малевич</a></li>
-                <li class="dropdown__item dropdown__item-img16"><a href="" class="dropdown__link">Пикассо</a></li>
-              </ul>
-            </div>
+        </li>
+        <li class="dropdown">
+          <button class="dropbtn" data-path="4">Авангард
+            <span class="dropbtn__icon1"></span>
+            <span class="dropbtn__icon2"></span>
+          </button>
+          <div class="dropdown__content-box" data-path="4">
+            <ul class="dropdown__content" data-simplebar>
+              <li class="dropdown__item dropdown__item-img13"><a class="dropdown__link" href="">Кандинский</a></li>
+              <li class="dropdown__item dropdown__item-img14"><a class="dropdown__link" href="">Маринетти</a></li>
+              <li class="dropdown__item dropdown__item-img15"><a class="dropdown__link" href="">Малевич</a></li>
+              <li class="dropdown__item dropdown__item-img16"><a class="dropdown__link" href="">Пикассо</a></li>
+            </ul>
           </div>
-          <div class="dropdown">
-            <button class="dropbtn">Футуризм
-              <span class="dropbtn__icon1"></span>
-              <span class="dropbtn__icon2"></span>
-            </button>
-            <div id="5" class="dropdown__content-box">
-              <ul class="dropdown__content">
-                <li class="dropdown__item dropdown__item-img17"><a href="" class="dropdown__link">Карра</a></li>
-                <li class="dropdown__item dropdown__item-img18"><a href="" class="dropdown__link">Прателла</a></li>
-                <li class="dropdown__item dropdown__item-img19"><a href="" class="dropdown__link">Северини</a></li>
-                <li class="dropdown__item dropdown__item-img20"><a href="" class="dropdown__link">Балла</a></li>
-              </ul>
-            </div>
+        </li>
+        <li class="dropdown last-dropdown">
+          <button class="dropbtn" data-path="5">Футуризм
+            <span class="dropbtn__icon1"></span>
+            <span class="dropbtn__icon2"></span>
+          </button>
+          <div class="dropdown__content-box" data-path="5">
+            <ul class="dropdown__content" data-simplebar>
+              <li class="dropdown__item dropdown__item-img17"><a class="dropdown__link" href="">Карра</a></li>
+              <li class="dropdown__item dropdown__item-img18"><a class="dropdown__link" href="">Прателла</a></li>
+              <li class="dropdown__item dropdown__item-img19"><a class="dropdown__link" href="">Северини</a></li>
+              <li class="dropdown__item dropdown__item-img20"><a class="dropdown__link" href="">Балла</a></li>
+            </ul>
           </div>
-          <!-- 1 -->
+        </li>
+        <li class="form-box">
           <form class="header__form" action="https://jsonplaceholder.typicode.com/posts" method="GET">
-            <button type="submit" class="header__form-btn">
+            <button class="header__form-btn" type="submit">
               <svg width="30" height="29" viewBox="0 0 30 29" fill="" xmlns="http://www.w3.org/2000/svg">
-                <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="white"/>
-                </svg>
+                <rect width="9.15446" height="2.28862"
+                  transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z"
+                  fill="white" />
+              </svg>
             </button>
-            <input type="text" placeholder="Поиск по сайту" class="header__search">
-            <!-- 1 -->
-
+            <input class="header__search" type="text" placeholder="Поиск по сайту">
           </form>
-        </div>
-      </div>
-    </header>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <main class="main">
     <section class="hero">
       <div class="container">
         <div class="hero__content">
@@ -163,7 +170,7 @@
             Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых
             предложений.
           </p>
-          <a href="" class="hero__btn">
+          <a class="hero__btn" href="">
             Подписаться на рассылку
           </a>
         </div>
@@ -179,44 +186,46 @@
         </div>
       </div>
     </section>
-  <main class="main">
-    <div class="container">
-      <section class="about about-m">
-        <h2 class="about__title regular-48">
-          О нас
-        </h2>
-        <p class="about__text regular-16">
-          Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого
-          участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов.
-          Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс
-          внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных
-          исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с
-          учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов,
-          действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны
-          быть разоблачены.
-        </p>
-      </section>
-    </div>
-    <section class="gallery">
-      <div class="container box-gallery">
+
+    <section class="about">
+      <div class="container">
+        <div class="about__content">
+          <h2 class="about__title regular-48">
+            О нас
+          </h2>
+          <p class="about__text regular-16">
+            Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого
+            участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов.
+            Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс
+            внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных
+            исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с
+            учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов,
+            действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны
+            быть разоблачены.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- <section class="gallery">
+      <div class="box-gallery container">
         <div class="gallery__filter">
           <h2 class="gallery__title regular-48">Галерея</h2>
           <div class="sel-desc">Фильтр:</div>
           <select class="gallery__select">
-            <option value="" class="gallery__option">Живопись</option>
-            <option value="" class="gallery__option">Скульптура</option>
-            <option value="" class="gallery__option">Рисунок</option>
+            <option class="gallery__option" value="">Живопись</option>
+            <option class="gallery__option" value="">Скульптура</option>
+            <option class="gallery__option" value="">Рисунок</option>
           </select>
           <p class="gallery__text">
-            Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a href=""
-              class="reg">авторизуйтесь</a>, либо воспользуйтесь лицензией.
+            Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a class="reg"
+              href="">авторизуйтесь</a>, либо воспользуйтесь лицензией.
           </p>
         </div>
         <div class="gallery__slider">
 
         </div>
       </div>
-    </section>
+    </section> -->
   </main>
 </body>
 
