@@ -53,25 +53,25 @@ button {
 .bold-700 {
   font-weight: 700;
   font-size: 18px;
-  line-height: 30px;
+  line-height: calc(30 / 18);
 }
 
 .bold-600 {
   font-weight: 600;
   font-size: 24px;
-  line-height: 32px;
+  line-height: calc(32 / 24);
 }
 
 .regular-48 {
   font-weight: 400;
   font-size: 48px;
-  line-height: 65px;
+  line-height: calc(65 / 48);
 }
 
 .regular-16 {
   font-weight: 400;
   font-size: 16px;
-  line-height: 32px;
+  line-height: calc(32 / 16);
 }
 
 /* check mark  */
@@ -119,7 +119,8 @@ button {
   border: none;
   background: transparent;
 }
- .burger__icon, .burger__icon::before, .burger__icon::after {
+
+.burger__icon, .burger__icon::before, .burger__icon::after {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -128,17 +129,21 @@ button {
   margin-left: -14px;
   background-color: #fff;
 }
- .burger__icon {
+
+.burger__icon {
   width: 28px;
 }
- .burger__icon::before, .burger__icon::after {
+
+.burger__icon::before, .burger__icon::after {
   content: '';
 }
- .burger__icon::before {
+
+.burger__icon::before {
   width: 36px;
   transform: translateY(-9px);
 }
- .burger__icon::after {
+
+.burger__icon::after {
   width: 24px;
   transform: translateY(8px);
 }
@@ -250,17 +255,9 @@ button {
   outline: none;
 }
 
-.header-nav__link:hover, .header__select:hover, .comein:hover, .choices__inner:hover {
-  color: var(--colorVioletLight);
-}
-
 .header-nav__link:active, .header__select:active, .comein:active {
   background: transparent;
   color: var(--colorViolet);
-}
-
-.comein:hover path {
-  fill: var(--colorVioletLight);
 }
 
 .comein:active path {
@@ -470,17 +467,9 @@ button {
   outline: none;
 }
 
-.dropbtn:hover {
-  color: var(--colorVioletLight);
-}
-
 .dropbtn:active {
   color: var(--colorViolet);
   background: transparent;
-}
-
-.dropbtn:hover .dropbtn__icon1, .dropbtn:hover .dropbtn__icon2 {
-  background: var(--colorVioletLight);
 }
 
 .dropbtn:active .dropbtn__icon1, .dropbtn:active .dropbtn__icon2 {
@@ -517,10 +506,6 @@ button {
   border: solid 2px #C283F3;
   opacity: 0;
   transition: .2s;
-}
-
-.dropdown__link:hover::before, .dropdown__link:focus::before {
-  opacity: 1;
 }
 
 .dropdown__link:active::after {
@@ -567,11 +552,6 @@ button {
   cursor: pointer;
 }
 
-.header__form-btn:hover path, .header__form-btn:hover rect {
-  fill: var(--colorVioletLight);
-  transition: .2s;
-}
-
 .header__form-btn:focus {
   background: var(--colorViolet);
   outline: none;
@@ -584,10 +564,6 @@ button {
 
 .header__form-btn:active {
   background: none;
-}
-
-.header__search:hover {
-  border-bottom: solid 1px var(--colorVioletLight);
 }
 
 .header__search:focus {
@@ -639,17 +615,19 @@ button {
     transform: translate(0, 0);
   }
 }
+
 @keyframes open-menu {
   0% {
-  transform: translateX(-1000px);
+    transform: translateX(-1000px);
   }
   100% {
     transform: translateX(0);
   }
 }
+
 @keyframes close-menu {
   0% {
-  transform: translateX(0);
+    transform: translateX(0);
   }
   100% {
     transform: translateX(-1000px);

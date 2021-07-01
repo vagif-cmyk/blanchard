@@ -41,7 +41,7 @@
   word-wrap: break-word;
   font-weight: 700;
   font-size: 72px;
-  line-height: 98px;
+  line-height: calc(98 / 72);
   color: #fff;
 }
 
@@ -58,7 +58,7 @@
   word-wrap: break-word;
   font-weight: 700;
   font-size: 18px;
-  line-height: 24px;
+  line-height: calc(24 / 18);
   color: #fff;
   background: #9D5CD0;
   border: solid 3px transparent;
@@ -73,14 +73,6 @@
 
 .hero__btn:focus::after {
   opacity: 1;
-}
-
-.hero__btn:hover {
-  border: solid 3px #D1A9F0;
-}
-
-.hero__btn:hover::after {
-  opacity: 0;
 }
 
 .hero__btn:active {

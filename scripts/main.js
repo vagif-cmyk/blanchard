@@ -1,4 +1,3 @@
-
 document.querySelector('.burger').addEventListener('click', () => openMenu());
 document.querySelector('.header-nav__close').addEventListener('click', () => closeMenu());
 
@@ -6,6 +5,33 @@ document.querySelectorAll('.dropbtn').forEach((e, i) => {
   e.addEventListener('click', () => hideShowBlock(e, i));
 });
 
+// swiper
+const swiper = new Swiper('.hero__bg-img', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  speed: 1800,
+  // autoplay
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: true,
+  },
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
 // функция которая откроет меню.
 function openMenu() {
   document.querySelector('.header-nav').classList.add('is-open');
@@ -58,7 +84,6 @@ function hideBlocks(str, i) {
       e.classList.remove('display-b');
   });
 }
-
 // функция которая закроет все выподающие списки(если они открыты) в header при клике в любом месте документа кроме кнопок 'dropbtn' .
 window.onclick = function (event) {
   if (!event.target.matches('.dropbtn')) {
@@ -75,40 +100,3 @@ window.onclick = function (event) {
     }
   }
 }
-
-// swiper
-const swiper = new Swiper('.hero__bg-img', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
-  speed: 1800,
-  // autoplay
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: true,
-  },
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-});
-
-// селект
-// const element = document.querySelector('select');
-
-// const choices = new Choices(element, {
-//   searchEnabled: false,
-//   itemSelectText: '',
-//   position: 'bottom'
-// });
