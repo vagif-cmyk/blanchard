@@ -5,41 +5,76 @@ document.querySelectorAll('.dropbtn').forEach((e, i) => {
   e.addEventListener('click', () => hideShowBlock(e, i));
 });
 
-// swiper
-const swiper = new Swiper('.hero__bg-img', {
-  // Optional parameters
+//  init select
+const element = document.querySelector('select');
+
+const choices = new Choices(element, {
+  searchEnabled: false,
+  itemSelectText: '',
+  position: 'bottom'
+});
+
+// init swiper
+const swiperHero = new Swiper('.hero__swiper', {
   direction: 'horizontal',
   loop: true,
-  speed: 1800,
-  // autoplay
+  speed: 2000,
+  effect: 'fade',
+  slideClass: 'hero__slide',
+  wrapperClass: 'hero__wrapper',
   autoplay: {
     delay: 3000,
     disableOnInteraction: true,
   },
-  // If we need pagination
+});
+
+const sliderGallery = new Swiper('.gallery__slider', {
+  direction: 'horizontal',
+  // loop: true,
+  // spaceBetween: 50,
+  slidesPerView: 1,
+  slidesPerColumn: 2,
+  slidesPerGroup: 3,
+  wrapperClass: 'gallery__wrapper',
+  slideClass: 'gallery__slide',
+  autoHeight: false,
   pagination: {
     el: '.swiper-pagination',
+    type: 'fraction',
     clickable: true,
   },
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
+  breakpoints: {
+    1025: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
+    670: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      slidesPerColumn: 2,
+    },
+    320: {
+      slidesPerView: 1,
+      slidesPerColumn: 1,
+      slidesPerGroup: 1,
+    },
   },
 });
+
 // функция которая откроет меню.
 function openMenu() {
+  document.body.style.overflow = 'hidden';
   document.querySelector('.header-nav').classList.add('is-open');
   document.querySelector('.comein').classList.add('is-open');
 }
 
 // функция которая закроет меню.
 function closeMenu() {
+  document.body.style.overflow = 'initial';
   document.querySelector('.header-nav').classList.remove('is-open');
   document.querySelector('.comein').classList.remove('is-open');
 }

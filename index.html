@@ -12,8 +12,8 @@
   <script defer src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 
   <!-- swiper API -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="css/swiper.css">
+  <script defer src="scripts/swiper.js"></script>
 
   <!-- simplebar API -->
   <link rel="stylesheet" href="css/simplebar.css">
@@ -42,7 +42,7 @@
         </a>
         <nav class="header-nav">
           <ul class="header-nav__list">
-            <li><button class="header-nav__close"></button></li>
+            <li class="header-nav__first-child"><button class="header-nav__close"></button></li>
             <li class="header-nav__item"><a class="header-nav__link" href="">О нас</a></li>
             <li class="header-nav__item"><a class="header-nav__link" href="">Галерея</a></li>
             <li class="header-nav__item"><a class="header-nav__link" href="">Каталог</a></li>
@@ -175,14 +175,11 @@
           </a>
         </div>
       </div>
-      <!-- Slider main container -->
-      <div class="swiper-container hero__bg-img">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide hero__img"></div>
-          <div class="swiper-slide hero__img2"></div>
-          <div class="swiper-slide hero__img3"></div>
+      <div class="hero__swiper">
+        <div class="hero__wrapper">
+          <div class="hero__slide hero__img"></div>
+          <div class="hero__slide hero__img2"></div>
+          <div class="hero__slide hero__img3"></div>
         </div>
       </div>
     </section>
@@ -203,6 +200,60 @@
             быть разоблачены.
           </p>
         </div>
+      </div>
+    </section>
+    <section class="gallery">
+      <div class="gallery__box container">
+        <div class="gallery__filter">
+          <h2 class="gallery__title regular-48">Галерея</h2>
+          <div class="sel-desc">Фильтр:</div>
+          <select class="gallery__select">
+            <option class="gallery__option" value="">Живопись</option>
+            <option class="gallery__option" value="">Скульптура</option>
+            <option class="gallery__option" value="">Рисунок</option>
+          </select>
+          <p class="gallery__text">
+            Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a class="reg"
+              href="">авторизуйтесь</a>, либо воспользуйтесь лицензией.
+          </p>
+        </div>
+        <div class="gallery__slider">
+          <div class="gallery-slider-buttons">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+          <div class="gallery__wrapper">
+            <img class="gallery__slide" src="img/gallery/gallery1.jpg" alt="картина">
+            <img class="gallery__slide" src="img/gallery/gallery2.jpg" alt="картина">
+            <img class="gallery__slide" src="img/gallery/gallery3.jpg" alt="картина">
+            <img class="gallery__slide" src="img/gallery/gallery7.jpg" alt="картина">
+            <img class="gallery__slide" src="img/gallery/gallery8.jpg" alt="картина">
+            <img class="gallery__slide" src="img/gallery/gallery9.jpg" alt="картина">
+            <img class="gallery__slide" src="img/gallery/gallery13.jpg" alt="картина">
+            <img class="gallery__slide" src="img/gallery/gallery14.jpg" alt="картина">
+            <img class="gallery__slide" src="img/gallery/gallery15.jpg" alt="картина">
+            <img class="gallery__slide" src="img/gallery/gallery19.jpg" alt="картина">
+            <img class="gallery__slide" src="img/gallery/gallery20.jpg" alt="картина">
+            <img class="gallery__slide" src="img/gallery/gallery21.jpg" alt="картина">
+            <img class="gallery__slide" src="img/gallery/gallery4.jpg" alt="картина">
+            <img class="gallery__slide" src="img/gallery/gallery5.jpg" alt="картина">
+            <img class="gallery__slide" src="img/gallery/gallery6.jpg" alt="картина">
+            <img class="gallery__slide" src="img/gallery/gallery10.jpg" alt="картина">
+            <img class="gallery__slide" src="img/gallery/gallery11.jpg" alt="картина">
+            <img class="gallery__slide" src="img/gallery/gallery12.jpg" alt="картина">
+            <img class="gallery__slide" src="img/gallery/gallery16.jpg" alt="картина">
+            <img class="gallery__slide" src="img/gallery/gallery17.jpg" alt="картина">
+            <img class="gallery__slide" src="img/gallery/gallery18.jpg" alt="картина">
+            <img class="gallery__slide" src="img/gallery/gallery22.jpg" alt="картина">
+            <img class="gallery__slide" src="img/gallery/gallery23.jpg" alt="картина">
+            <img class="gallery__slide" src="img/gallery/gallery24.jpg" alt="картина">
+          </div>
+        </div>
+        <p class="gallery__text-mob">
+          Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a class="reg"
+            href="">авторизуйтесь</a>, либо воспользуйтесь лицензией.
+        </p>
       </div>
     </section>
   </main>
