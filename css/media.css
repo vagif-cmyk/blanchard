@@ -1,5 +1,5 @@
 @media (min-width: 1025px) and (max-width: 1920px) {
-  /* header hover */
+  /*  hovers */
   .header-nav__link:hover, .header__select:hover, .comein:hover, .choices__inner:hover {
     color: var(--colorVioletLight);
   }
@@ -22,18 +22,12 @@
   .header__search:hover {
     border-bottom: solid 1px var(--colorVioletLight);
   }
-
   .hero__btn:hover {
     border: solid 3px #D1A9F0;
   }
   .hero__btn:hover::after {
     opacity: 0;
   }
-
-  .choices:hover {
-    background: rgba(255, 255, 255, 0.2);
-  }
-
   .header-nav__link:active, .header__select:active, .comein:active {
     background: transparent;
     color: var(--colorViolet);
@@ -41,6 +35,32 @@
   .comein:active path {
     fill: var(--colorViolet);
   }
+  .choices:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  .swiper-button-next:hover, .swiper-button-prev:hover {
+    background-color: var(--colorVioletLight);
+  }
+  .countries__btn:hover {
+  filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
+  }
+
+  .accor__link:hover {
+    color: #9D5CD0;
+    border-bottom: 1px solid #9D5CD0;
+  }
+
+  .accor__item:hover {
+    color: #9D5CD0;
+    border-top: 1px solid #9D5CD0;
+    border-bottom: 1px solid #9D5CD0;
+  }
+
+  .accor__item:hover .ui-icon {
+    background-color: #D1A9F0;
+  }
+
+  /* active */
   .dropbtn:active {
     color: var(--colorViolet);
     background: transparent;
@@ -58,7 +78,6 @@
   .header__form-btn:active {
     background: none;
   }
-
   .hero__btn:active {
     background: var(--colorViolet);
     border: solid 3px #D1A9F0;
@@ -66,7 +85,27 @@
   .hero__btn:active::after {
     opacity: 0;
   }
+  .swiper-button-next:active, .swiper-button-prev:active {
+    background-color: var(--colorViolet);
+    border: 2px solid #000;
+  }
+  .countries__btn:active {
+    border: 2px solid #7943A4;
+    border-radius: 50%;
+  }
+  .accor__link:active {
+    color: var(--colorViolet);
+    background: none;
+  }
+  .accor__item:active {
+    color: var(--colorViolet);
+    border-top: 1px solid var(--colorViolet);
+    border-bottom: 1px solid var(--colorViolet);
+  }
 
+  .accor__item:active .ui-icon {
+    border: 1px solid var(--colorViolet);
+  }
 }
 
 @media (max-width: 1700px) {
@@ -213,6 +252,9 @@
     max-width: 100%;
     margin-bottom: 30px;
   }
+  .gallery__slide {
+    height: calc((100% - 34px) / 2);
+  }
 }
 
 @media (max-width: 670px) {
@@ -340,6 +382,9 @@
     max-width: 150px;
     margin-left: auto;
     margin-right: auto;
+  }
+  .gallery__slide {
+    height: calc((100% - 15px) / 2);
   }
 }
 

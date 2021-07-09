@@ -5,6 +5,12 @@ document.querySelectorAll('.dropbtn').forEach((e, i) => {
   e.addEventListener('click', () => hideShowBlock(e, i));
 });
 
+document.querySelectorAll('[class^="countries__btn"]').forEach((e) => {
+  showTab(e);
+});
+
+
+
 //  init select
 const element = document.querySelector('select');
 
@@ -28,16 +34,25 @@ const swiperHero = new Swiper('.hero__swiper', {
   },
 });
 
+// init accordions
+$(function () {
+  $(".accor").accordion({
+    active: false,
+    collapsible: true,
+    heightStyle: 'content',
+  });
+});
+
 const sliderGallery = new Swiper('.gallery__slider', {
   direction: 'horizontal',
-  // loop: true,
-  // spaceBetween: 50,
-  slidesPerView: 1,
+  spaceBetween: 50,
+  slidesPerView: 3,
   slidesPerColumn: 2,
-  slidesPerGroup: 3,
+  slidesPerColumnFill: 'row',
   wrapperClass: 'gallery__wrapper',
   slideClass: 'gallery__slide',
   autoHeight: false,
+
   pagination: {
     el: '.swiper-pagination',
     type: 'fraction',
@@ -50,17 +65,21 @@ const sliderGallery = new Swiper('.gallery__slider', {
   breakpoints: {
     1025: {
       slidesPerView: 3,
-      slidesPerGroup: 3,
+    },
+    769: {
+      slidesPerView: 2,
+      slidesPerColumn: 2,
+      spaceBetween: 50,
     },
     670: {
       slidesPerView: 2,
-      slidesPerGroup: 2,
       slidesPerColumn: 2,
+      spaceBetween: 34,
     },
     320: {
       slidesPerView: 1,
       slidesPerColumn: 1,
-      slidesPerGroup: 1,
+      spaceBetween: 0,
     },
   },
 });
@@ -134,4 +153,21 @@ window.onclick = function (event) {
       }
     }
   }
+}
+
+function showTab(e) {
+  e.addEventListener('click', (el) => {
+    const path = el.currentTarget.dataset.path;
+
+    document.querySelectorAll('[class^="catalog__tab-"]').forEach((elem) => {
+      elem.classList.remove('is-active');
+    });
+
+    document.querySelectorAll('.countries__item').forEach((e) => {
+      e.classList.remove('is-clicked');
+    });
+
+    document.querySelector(`[class^="catalog__tab-"][data-path="${path}"]`).classList.add('is-active');
+    document.querySelector(`[data-path="${path}"]`).closest('.countries__item').classList.add('is-clicked');
+  });
 }

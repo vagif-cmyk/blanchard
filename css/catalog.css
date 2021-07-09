@@ -1,0 +1,261 @@
+.catalog {
+  padding: 82px 0 40px;
+}
+
+.catalog__top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 23px;
+}
+
+.catalog__text {
+  max-width: 1080px;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.catalog__title {
+  margin: 0;
+  margin-right: 39px;
+}
+
+.countries {
+  display: flex;
+}
+
+.countries :not(:last-child) {
+  margin-right: 50px;
+}
+
+.countries__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 66px;
+  height: 66px
+}
+
+.countries__btn {
+  width: 46px;
+  height: 46px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.countries__btn:focus {
+  outline: none;
+  filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
+}
+
+.countries__btn1 {
+  background: url('../img/catalog/frank.png') center / cover no-repeat;
+}
+
+.countries__btn2 {
+  background: url('../img/catalog/germ.png') center / cover no-repeat;
+}
+
+.countries__btn3 {
+  background: url('../img/catalog/ital.png') center / cover no-repeat;
+}
+
+.countries__btn4 {
+  background: url('../img/catalog/rus.png') center / cover no-repeat;
+}
+
+.countries__btn5 {
+  background: url('../img/catalog/belg.png') center / cover no-repeat;
+}
+
+[class^="catalog__tab-"] {
+  display: none;
+  opacity: 0;
+}
+
+[class^="catalog__tab-"].is-active {
+  animation-name: show-drop;
+  animation-duration: 500ms;
+}
+
+.is-active {
+  display: block;
+  opacity: 1;
+}
+
+.is-clicked {
+  border: 2px solid #7943A4;
+  border-radius: 50%;
+}
+
+.artist {
+  display: flex;
+  flex-direction: column;
+  max-width: 750px;
+  margin-right: 50px;
+}
+
+.catalog__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.artist__foto {
+  margin-bottom: 30px;
+  object-fit: cover;
+}
+
+.artist__desc {
+  margin: 0;
+}
+
+.artist__name {
+  margin-bottom: 15px;
+}
+
+.artist__years {
+  display: block;
+}
+
+/* accordion */
+
+.accor {
+  width: 100%;
+}
+
+.accor> :first-child {
+  border-top: 1px solid #CACACA;
+}
+
+.accor__item-content {
+  display: flex;
+}
+
+.accor__item-name {
+  margin-right: 50px;
+}
+
+.ui-icon {
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+  background-color: #ECECEC;
+  background-image: url('../img/catalog/mark.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  transform: rotate(180deg);
+  transition: .2s;
+}
+
+.ui-state-active .ui-icon {
+  transform: rotate(0);
+}
+
+.accor__item {
+  position: relative;
+  margin: 0;
+  margin-top: -1px;
+  padding: 32px 0;
+  color: #333;
+  border: 1px solid #CACACA;
+  border-top: 1px solid transparent;
+  border-left: initial;
+  border-right: initial;
+  transition: .2s;
+}
+
+.accor__item-title {
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  max-width: 54%;
+  margin: 0;
+  padding: 0;
+  transition: .2s;
+}
+
+.accor__link {
+  color: #333;
+  transition: .2s;
+}
+
+.accor__item_empty {
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+}
+
+.accor__item_empty_left {
+  position: relative;
+  width: 48%;
+  min-height: 189px;
+  margin-right: 24px;
+  border: 1px solid #B7B7B7;
+}
+
+.accor__item_empty_left::after {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  content: '';
+  background-color: #B7B7B7;
+}
+
+.accor__item_empty_right {
+  width: 48%;
+}
+
+.accor__item_empty_right-title {
+  margin: 0;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.accor__item_empty_right-desc {
+  margin: 0;
+  margin-bottom: 5px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(21 / 16);
+  color: #333;
+}
+
+.accor__item_empty_right-link {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: calc(21 / 16);
+  color: #9D5CD0;
+}
+
+.accor__item-title.ui-state-active {
+  padding-bottom: 30px;
+}
+
+.accor__item-content {
+  padding-top: 25px;
+  border-top: 1px solid #CACACA;
+}
+.accor__item-title:focus {
+  color: #fff;
+  background-color: #7943A4;
+  outline: none;
+}
+
+.accor__item-title:focus.ui-state-active {
+  color: #7943A4;
+  background: none;
+}
+.accor__link:focus {
+  outline: none;
+  color: #fff;
+  background: var(--colorViolet);
+}
+
+.accor__item-title.ui-state-active .ui-icon {
+  background-color: #D1A9F0;
+}
+
