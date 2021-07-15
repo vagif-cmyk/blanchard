@@ -45,11 +45,12 @@
   filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
   }
 
-  .accor__link:hover {
+  .accor__btn:hover {
     color: #9D5CD0;
-    border-bottom: 1px solid #9D5CD0;
   }
-
+  .accor__btn:hover::after {
+    width: 100%;
+  }
   .accor__item:hover {
     color: #9D5CD0;
     border-top: 1px solid #9D5CD0;
@@ -58,6 +59,9 @@
 
   .accor__item:hover .ui-icon {
     background-color: #D1A9F0;
+  }
+  .accor__item:hover .accor__item-title {
+    color: #9D5CD0;
   }
 
   /* active */
@@ -93,7 +97,7 @@
     border: 2px solid #7943A4;
     border-radius: 50%;
   }
-  .accor__link:active {
+  .accor__btn:active {
     color: var(--colorViolet);
     background: none;
   }
@@ -102,7 +106,6 @@
     border-top: 1px solid var(--colorViolet);
     border-bottom: 1px solid var(--colorViolet);
   }
-
   .accor__item:active .ui-icon {
     border: 1px solid var(--colorViolet);
   }
@@ -135,6 +138,14 @@
   .hero__text {
     margin-bottom: 107px;
   }
+  /* catalaog  */
+  .accor__item-title {
+    max-width: 37%;
+  }
+  .accor__item-names {
+    columns: auto 2;
+  }
+
 }
 
 @media (max-width: 1300px) {
@@ -159,6 +170,10 @@
   }
   .header__search::placeholder {
     font-size: 12px;
+  }
+  /* catalog  */
+  .accor__item-title {
+    max-width: 60%;
   }
 }
 
@@ -222,7 +237,10 @@
   .about__content {
     max-width: 100%;
   }
-  /* gallery */
+  /* catalog  */
+  .accor__item-title {
+    max-width: 70%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -254,6 +272,36 @@
   }
   .gallery__slide {
     height: calc((100% - 34px) / 2);
+  }
+  /* catalog  */
+   .catalog__content {
+    flex-direction: column-reverse;
+  }
+  .catalog__text {
+    margin-bottom: 30px;
+  }
+  .countries :not(:last-child) {
+    margin: 0;
+  }
+  .countries {
+    justify-content: space-between;
+    width: 70%;
+  }
+  .accor {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .accor__item-names {
+    columns: auto 3;
+  }
+  .artist {
+    width: 100%;
+    margin: 0;
+  }
+  .artist__years {
+    font-size: 12px;
+    line-height: calc(16 / 12);
+    color: #999;
   }
 }
 
@@ -348,10 +396,13 @@
     padding-top: 50px;
     padding-bottom: 50px;
   }
-  .about__title {
-    margin-bottom: 20px;
+  .regular-48 {
+    font-weight: 400;
     font-size: 28px;
-    line-height: 38px;
+    line-height: calc(38 / 28);
+  }
+  .bold-600 {
+    font-size: 18px;
   }
   .about__text {
     font-size: 14px;
@@ -386,6 +437,36 @@
   .gallery__slide {
     height: calc((100% - 15px) / 2);
   }
+  /* catalog  */
+  .catalog__top {
+    flex-direction: column;
+    align-items: start;
+  }
+  .accor__item-names {
+    columns: auto 1;
+  }
+  .catalog__title {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .countries__item {
+    width: 44px;
+    height: 44px;
+  }
+  .countries__btn {
+    width: 32px;
+    height: 32px;
+  }
+  .countries {
+    justify-content: initial;
+    width: 100%;
+  }
+  .countries :not(:last-child) {
+    margin-right: 20px;
+  }
+  .catalog__text {
+    display: none;
+  }
 }
 
 @media (max-width: 320px) {
@@ -398,5 +479,25 @@
   }
   .swiper-pagination {
     font-size: 13px;
+  }
+  /* catalog  */
+  .catalog {
+    padding: 50px 0 25px 0;
+  }
+  .accor__item {
+    padding: 20px 0;
+  }
+  .ui-icon {
+    width: 30px;
+    height: 30px;
+  }
+  .accor__item-content {
+    padding-top: 20px;
+  }
+  .artist__foto {
+    margin-bottom: 20px;
+  }
+  .artist__name {
+    margin-bottom: 15px;
   }
 }

@@ -8,7 +8,9 @@ document.querySelectorAll('.dropbtn').forEach((e, i) => {
 document.querySelectorAll('[class^="countries__btn"]').forEach((e) => {
   showTab(e);
 });
-
+document.querySelectorAll('.accor__btn').forEach((e) => {
+  showTabArtist(e);
+});
 
 
 //  init select
@@ -169,5 +171,24 @@ function showTab(e) {
 
     document.querySelector(`[class^="catalog__tab-"][data-path="${path}"]`).classList.add('is-active');
     document.querySelector(`[data-path="${path}"]`).closest('.countries__item').classList.add('is-clicked');
+  });
+}
+
+function showTabArtist(e) {
+
+  e.addEventListener('click', (el) => {
+
+    const path = el.currentTarget.dataset.path;
+    const dataAtr = document.querySelector(`[data-path="${path}"]`);
+
+    document.querySelectorAll('.catalog__content').forEach(elem => {
+      if (elem.contains(dataAtr)) {
+        elem.querySelectorAll('.accor__btn').forEach((elem) => { elem.classList.remove('c-violet'); });
+        el.target.classList.add('c-violet');
+
+        elem.querySelectorAll('.catalog__artist').forEach((elem) => { elem.classList.remove('is-active'); });
+        elem.querySelector(`[class^="catalog__artist"][data-path="${path}"]`).classList.add('is-active');
+      }
+    });
   });
 }
