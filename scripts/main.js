@@ -11,7 +11,10 @@ document.querySelectorAll('[class^="countries__btn"]').forEach((e) => {
 document.querySelectorAll('.accor__btn').forEach((e) => {
   showTabArtist(e);
 });
-
+document.querySelector('.events__btn').addEventListener('click', (e) => {
+  e.currentTarget.classList.add('d-none');
+document.querySelectorAll('.events__card').forEach( e => { e.classList.remove('d-none') }) ;
+});
 
 //  init select
 const element = document.querySelector('select');
@@ -22,7 +25,7 @@ const choices = new Choices(element, {
   position: 'bottom'
 });
 
-// init swiper
+// init swiper hero
 const swiperHero = new Swiper('.hero__swiper', {
   direction: 'horizontal',
   loop: true,
@@ -45,6 +48,7 @@ $(function () {
   });
 });
 
+// init swiper gallery
 const sliderGallery = new Swiper('.gallery__slider', {
   direction: 'horizontal',
   spaceBetween: 50,
@@ -85,6 +89,18 @@ const sliderGallery = new Swiper('.gallery__slider', {
     },
   },
 });
+
+// init swiper events
+// const swiper = new Swiper('.events__slider', {
+//   direction: 'horizontal',
+//   loop: true,
+//   wrapperClass: 'events__wrapper',
+//   slideClass: 'events__slide',
+
+//   pagination: {
+//     el: '.events-pagination',
+//   },
+// });
 
 // функция которая откроет меню.
 function openMenu() {

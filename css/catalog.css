@@ -133,6 +133,12 @@
   color: #9D5CD0;
 }
 
+.artist__not-found-link:focus, .accor__item-empty-right-link:focus {
+  outline: none;
+  color: #fff;
+  background-color: #7943A4;
+}
+
 /* accordion */
 
 .accor {
@@ -155,7 +161,7 @@
   width: 50px;
   height: 50px;
   background-color: #ECECEC;
-  background-image: url('../img/catalog/mark.svg');
+  background-image: url('../img/catalog/mark.png');
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 50%;
@@ -171,7 +177,6 @@
   position: relative;
   margin: 0;
   margin-top: -1px;
-  padding: 32px 0;
   color: #333;
   border: 1px solid #CACACA;
   border-top: 1px solid transparent;
@@ -184,9 +189,8 @@
   display: flex;
   align-items: center;
   z-index: 1;
-  max-width: 28%;
   margin: 0;
-  padding: 0;
+  padding: 32px 0;
   color: #333;
   cursor: pointer;
   transition: .2s;
@@ -213,13 +217,13 @@
   transition: .2s;
 }
 
-.accor__item_empty {
+.accor__item-empty {
   display: flex;
   align-items: center;
   max-width: 600px;
 }
 
-.accor__item_empty_left {
+.accor__item-empty-left {
   position: relative;
   width: 48%;
   min-height: 189px;
@@ -227,7 +231,7 @@
   border: 1px solid #B7B7B7;
 }
 
-.accor__item_empty_left::after {
+.accor__item-empty-left::after {
   position: absolute;
   top: 12px;
   left: 12px;
@@ -237,17 +241,17 @@
   background-color: #B7B7B7;
 }
 
-.accor__item_empty_right {
+.accor__item-empty-right {
   width: 48%;
 }
 
-.accor__item_empty_right-title {
+.accor__item-empty-right-title {
   margin: 0;
   margin-bottom: 5px;
   color: #333;
 }
 
-.accor__item_empty_right-desc {
+.accor__item-empty-right-desc {
   margin: 0;
   margin-bottom: 5px;
   font-weight: 400;
@@ -256,7 +260,7 @@
   color: #333;
 }
 
-.accor__item_empty_right-link {
+.accor__item-empty-right-link {
   font-weight: 600;
   font-size: 16px;
   line-height: calc(21 / 16);
@@ -268,14 +272,16 @@
 }
 
 .accor__item-content {
-  padding-top: 25px;
+  padding: 25px 0;
   border-top: 1px solid #CACACA;
 }
 
 .accor__item-title:focus {
+  outline: none;
+}
+.accor__item-title:focus span {
   color: #fff;
   background-color: #7943A4;
-  outline: none;
 }
 
 .accor__item-title:focus.ui-state-active {
@@ -303,6 +309,7 @@
   animation-name: show-drop;
   animation-duration: 400ms;
 }
+
 .c-violet {
   color: var(--colorViolet);
 }
