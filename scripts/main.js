@@ -13,9 +13,29 @@ document.querySelectorAll('.accor__btn').forEach((e) => {
 });
 document.querySelector('.events__btn').addEventListener('click', (e) => {
   e.currentTarget.classList.add('d-none');
-document.querySelectorAll('.events__card').forEach( e => { e.classList.remove('d-none') }) ;
+  document.querySelectorAll('.events__card').forEach(e => { e.classList.remove('d-none') });
 });
 
+if (window.innerWidth < 950) {
+  document.querySelector('.events__card3').classList.add('d-none');
+}
+
+// init swiper events
+if (window.innerWidth < 671) {
+  document.querySelector('.events__btn').classList.add('d-none');
+  document.querySelectorAll('.events__card').forEach(e => { e.classList.remove('d-none') });
+
+  const swiper = new Swiper('.events__slider', {
+    direction: 'horizontal',
+    loop: true,
+    wrapperClass: 'events__wrapper',
+    slideClass: 'events__slide',
+
+    pagination: {
+      el: '.events-pagination',
+    },
+  });
+}
 //  init select
 const element = document.querySelector('select');
 
@@ -89,18 +109,6 @@ const sliderGallery = new Swiper('.gallery__slider', {
     },
   },
 });
-
-// init swiper events
-// const swiper = new Swiper('.events__slider', {
-//   direction: 'horizontal',
-//   loop: true,
-//   wrapperClass: 'events__wrapper',
-//   slideClass: 'events__slide',
-
-//   pagination: {
-//     el: '.events-pagination',
-//   },
-// });
 
 // функция которая откроет меню.
 function openMenu() {
