@@ -61,6 +61,14 @@
   .accor__item:hover .accor__item-title {
     color: #9D5CD0;
   }
+  .events__card-link:hover {
+    color: #D1A9F0;
+    border-bottom: 1px solid #D1A9F0;
+  }
+  .events__btn:hover {
+    color: #fff;
+    background-color: #9D5CD0;
+  }
   /* active */
   .dropbtn:active {
     color: var(--colorViolet);
@@ -105,6 +113,14 @@
   }
   .accor__item:active .ui-icon {
     border: 1px solid var(--colorViolet);
+  }
+  .events__card-link:active {
+    color: var(--colorViolet);
+    border-bottom: 1px solid var(--colorViolet);
+  }
+  .events__btn:active {
+    color: #fff;
+    background-color: var(--colorViolet);
   }
 }
 
@@ -276,7 +292,6 @@
     height: calc((100% - 34px) / 2);
   }
   /* catalog  */
-
   .catalog__content {
     flex-direction: column-reverse;
   }
