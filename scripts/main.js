@@ -223,6 +223,49 @@ const sliderGallery = new Swiper('.gallery__slider', {
   },
 });
 
+// init swiper section projects
+const swiperProjects = new Swiper('.projects__container', {
+  direction: 'horizontal',
+  loop: true,
+  slidesPerView: 3,
+  spaceBetween: 50,
+  wrapperClass: 'projects__wrapper',
+  slideClass: 'projects__slide',
+
+  navigation: {
+    nextEl: '.projects__button-next',
+    prevEl: '.projects__button-prev',
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+    },
+    670: {
+      slidesPerView: 2,
+      spaceBetween: 34,
+    },
+    1024: {
+      spaceBetween: 50,
+    },
+  }
+});
+
+// init tippy in section projects
+tippy('.projects__tyl-1', {
+  content: "Пример современных тенденций - современная методология разработки",
+  theme: 'violet',
+});
+tippy('.projects__tyl-2', {
+  content: "Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции",
+  theme: 'violet',
+});
+tippy('.projects__tyl-3', {
+  content: "В стремлении повысить качество",
+  theme: 'violet',
+});
+
 function swiperMoboleDestoy(swiper) {
   const windowWidth = Math.max(
     document.body.scrollWidth,
