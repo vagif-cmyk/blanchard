@@ -110,6 +110,9 @@
   .contacts__icon:hover {
     opacity: 0.5;
   }
+  .footer__link:hover path {
+    fill: #fff;
+  }
   /* active */
   .dropbtn:active {
     color: var(--colorViolet);
@@ -186,6 +189,9 @@
   }
   .projects__button-next:active, .projects__button-prev:active {
     background-color: var(--colorViolet);
+  }
+  .footer__link:active path {
+    fill: #9D5CD0;
   }
 }
 
@@ -339,7 +345,10 @@
   .events__card-text {
     margin-bottom: 27px;
   }
-  /* editions  */
+  /* footer */
+  .footer__list :not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 @media (max-width: 950px) {
@@ -757,7 +766,7 @@
   }
   /* contacts  */
   .contacts {
-    padding: 25px 0 0;
+    padding: 25px 0 30px;
   }
   .contacts__container {
     flex-direction: column-reverse;
@@ -789,6 +798,20 @@
   }
   .contacts__btn {
     padding: 12px 35px;
+  }
+  /* footer  */
+  .footer {
+    padding: 20px 0;
+  }
+  .footer__link svg {
+    width: 50px;
+    height: 50px;
+  }
+  .footer__container {
+    flex-direction: column-reverse;
+  }
+  .footer__list {
+    margin-bottom: 20px;
   }
 }
 
