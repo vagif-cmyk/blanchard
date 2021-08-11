@@ -9,6 +9,7 @@
 .gallery__title, .gallery__text {
   margin: 0;
 }
+
 .gallery__title {
   margin-bottom: 30px;
   line-height: 1;
@@ -100,9 +101,11 @@
   top: 12px;
   transform: none;
 }
+
 .gallery {
   position: relative;
 }
+
 .gallery__box {
   display: flex;
   justify-content: space-between;
@@ -123,9 +126,9 @@
 /* swiper */
 
 .gallery__slider {
+  z-index: 1;
   max-width: 71.5%;
   height: 100%;
-  z-index: 1;
   overflow: hidden;
 }
 
@@ -137,8 +140,60 @@
 }
 
 .gallery__slide {
+  position: relative;
   flex-shrink: 0;
   height: calc((100% - 50px) / 2);
+  padding: 0;
+  line-height: 0;
+  background-color: transparent;
+}
+
+.gallery__slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: 3px solid transparent;
+  transition: .2s;
+}
+
+.gallery__slide::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+  box-sizing: border-box;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url('../img/gallery/slide-icon.svg');
+  background-repeat: no-repeat;
+  background-size: 24%;
+  background-position: center;
+  background-clip: content-box;
+  transition: opacity .2s ease;
+}
+
+.gallery__slide:hover::after {
+  opacity: 1;
+}
+
+.gallery__slide:focus {
+  outline: none;
+}
+.gallery__slide:focus::before {
+  border-color: #7943A4;
+}
+
+.gallery__slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .gallery-slider-buttons {
@@ -158,6 +213,7 @@
   background-repeat: no-repeat;
   transition: .2s;
 }
+
 .swiper-button-next:focus, .swiper-button-prev:focus {
   outline: none;
   border: 2px solid #000;
@@ -172,7 +228,6 @@
   background-image: url(../img/gallery/prev.svg);
 }
 
-
 .swiper-pagination {
   position: static;
   width: auto;
@@ -183,10 +238,12 @@
 .swiper-button-next::after, .swiper-button-prev::after {
   display: none;
 }
+
 .reg:focus {
-background: var(--colorViolet);
-outline: none;
+  background: var(--colorViolet);
+  outline: none;
 }
+
 .gallery__text-mob {
   display: none;
   font-weight: 600;

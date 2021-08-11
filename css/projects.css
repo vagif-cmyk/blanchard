@@ -89,8 +89,12 @@
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  min-height: 150px;
   border: 1px solid #CACACA;
+}
+.projects__slide::after {
+  content: '';
+  display: block;
+  padding-top: 35%;
 }
 
 .projects__button-prev, .projects__button-next {
@@ -140,8 +144,12 @@
 }
 
 .projects__slide-img {
-  padding: 20px 10px;
-  object-fit: cover;
+  position: absolute;
+  display: block;
+  height: 100%;
+  padding: 10%;
+  object-fit: contain;
   filter: grayscale(100%);
+  opacity: 0.5;
   transition: .2s;
 }

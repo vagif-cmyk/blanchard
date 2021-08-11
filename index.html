@@ -27,6 +27,15 @@
   <script defer src="scripts/popper.js"></script>
   <script defer src="scripts/tippy.js"></script>
 
+  <!-- yandex API  -->
+  <script defer src="scripts/yamap.js"></script>
+
+  <!-- just-validate API -->
+  <script defer src="scripts/validate.js"></script>
+
+  <!-- inputmask API -->
+  <script defer src="scripts/inputmask.js"></script>
+
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/head.css">
   <link rel="stylesheet" href="css/hero.css">
@@ -36,6 +45,7 @@
   <link rel="stylesheet" href="css/events.css">
   <link rel="stylesheet" href="css/editions.css">
   <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="css/contacts.css">
   <link rel="stylesheet" href="css/media.css">
 
   <script defer src="scripts/main.js"></script>
@@ -236,54 +246,150 @@
             <button class="swiper-button-next"></button>
           </div>
           <div class="gallery__wrapper">
-            <img class="gallery__slide" src="img/gallery/gallery1.jpg" srcset="img/gallery/gallery1-2x.jpg 2x"
-              alt="картина">
-            <img class="gallery__slide" src="img/gallery/gallery2.jpg" srcset="img/gallery/gallery2-2x.jpg 2x"
-              alt="картина">
-            <img class="gallery__slide" src="img/gallery/gallery3.jpg" srcset="img/gallery/gallery3-2x.jpg 2x"
-              alt="картина">
-            <img class="gallery__slide" src="img/gallery/gallery7.jpg" srcset="img/gallery/gallery7-2x.jpg 2x"
-              alt="картина">
-            <img class="gallery__slide" src="img/gallery/gallery8.jpg" srcset="img/gallery/gallery8-2x.jpg 2x"
-              alt="картина">
-            <img class="gallery__slide" src="img/gallery/gallery9.jpg" srcset="img/gallery/gallery9-2x.jpg 2x"
-              alt="картина">
-            <img class="gallery__slide" src="img/gallery/gallery13.jpg" srcset="img/gallery/gallery13-2x.jpg 2x"
-              alt="картина">
-            <img class="gallery__slide" src="img/gallery/gallery14.jpg" srcset="img/gallery/gallery14-2x.jpg 2x"
-              alt="картина">
-            <img class="gallery__slide" src="img/gallery/gallery15.jpg" srcset="img/gallery/gallery15-2x.jpg 2x"
-              alt="картина">
-            <img class="gallery__slide" src="img/gallery/gallery19.jpg" srcset="img/gallery/gallery19-2x.jpg 2x"
-              alt="картина">
-            <img class="gallery__slide" src="img/gallery/gallery20.jpg" srcset="img/gallery/gallery20-2x.jpg 2x"
-              alt="картина">
-            <img class="gallery__slide" src="img/gallery/gallery21.jpg" srcset="img/gallery/gallery21-2x.jpg 2x"
-              alt="картина">
-            <img class="gallery__slide" src="img/gallery/gallery4.jpg" srcset="img/gallery/gallery4-2x.jpg 2x"
-              alt="картина">
-            <img class="gallery__slide" src="img/gallery/gallery5.jpg" srcset="img/gallery/gallery5-2x.jpg 2x"
-              alt="картина">
-            <img class="gallery__slide" src="img/gallery/gallery6.jpg" srcset="img/gallery/gallery6-2x.jpg 2x"
-              alt="картина">
-            <img class="gallery__slide" src="img/gallery/gallery10.jpg" srcset="img/gallery/gallery10-2x.jpg 2x"
-              alt="картина">
-            <img class="gallery__slide" src="img/gallery/gallery11.jpg" srcset="img/gallery/gallery11-2x.jpg 2x"
-              alt="картина">
-            <img class="gallery__slide" src="img/gallery/gallery12.jpg" srcset="img/gallery/gallery12-2x.jpg 2x"
-              alt="картина">
-            <img class="gallery__slide" src="img/gallery/gallery16.jpg" srcset="img/gallery/gallery16-2x.jpg 2x"
-              alt="картина">
-            <img class="gallery__slide" src="img/gallery/gallery17.jpg" srcset="img/gallery/gallery17-2x.jpg 2x"
-              alt="картина">
-            <img class="gallery__slide" src="img/gallery/gallery18.jpg" srcset="img/gallery/gallery18-2x.jpg 2x"
-              alt="картина">
-            <img class="gallery__slide" src="img/gallery/gallery22.jpg" srcset="img/gallery/gallery22-2x.jpg 2x"
-              alt="картина">
-            <img class="gallery__slide" src="img/gallery/gallery23.jpg" srcset="img/gallery/gallery23-2x.jpg 2x"
-              alt="картина">
-            <img class="gallery__slide" src="img/gallery/gallery24.jpg" srcset="img/gallery/gallery24-2x.jpg 2x"
-              alt="картина">
+            <button class="gallery__slide">
+              <picture>
+                <source srcset="img/gallery/gallery1.jpg 1x, img/gallery/gallery1-2x.jpg 2x">
+                <img class="gallery__slide-image" src="img/gallery/gallery1.jpg" alt="картина">
+              </picture>
+            </button>
+            <button class="gallery__slide">
+              <picture>
+                <source srcset="img/gallery/gallery2.jpg 1x, img/gallery/gallery2-2x.jpg 2x">
+                <img class="gallery__slide-image" src="img/gallery/gallery2.jpg" alt="картина">
+              </picture>
+            </button>
+            <button class="gallery__slide">
+              <picture>
+                <source srcset="img/gallery/gallery3.jpg 1x, img/gallery/gallery3-2x.jpg 2x">
+                <img class="gallery__slide-image" src="img/gallery/gallery3.jpg" alt="картина">
+              </picture>
+            </button>
+            <button class="gallery__slide">
+              <picture>
+                <source srcset="img/gallery/gallery7.jpg 1x, img/gallery/gallery7-2x.jpg 2x">
+                <img class="gallery__slide-image" src="img/gallery/gallery7.jpg" alt="картина">
+              </picture>
+            </button>
+            <button class="gallery__slide">
+              <picture>
+                <source srcset="img/gallery/gallery8.jpg 1x, img/gallery/gallery8-2x.jpg 2x">
+                <img class="gallery__slide-image" src="img/gallery/gallery8.jpg" alt="картина">
+              </picture>
+            </button>
+            <button class="gallery__slide">
+              <picture>
+                <source srcset="img/gallery/gallery9.jpg 1x, img/gallery/gallery9-2x.jpg 2x">
+                <img class="gallery__slide-image" src="img/gallery/gallery9.jpg" alt="картина">
+              </picture>
+            </button>
+            <button class="gallery__slide">
+              <picture>
+                <source srcset="img/gallery/gallery13.jpg 1x, img/gallery/gallery13-2x.jpg 2x">
+                <img class="gallery__slide-image" src="img/gallery/gallery13.jpg" alt="картина">
+              </picture>
+            </button>
+            <button class="gallery__slide">
+              <picture>
+                <source srcset="img/gallery/gallery14.jpg 1x, img/gallery/gallery14-2x.jpg 2x">
+                <img class="gallery__slide-image" src="img/gallery/gallery14.jpg" alt="картина">
+              </picture>
+            </button>
+            <button class="gallery__slide">
+              <picture>
+                <source srcset="img/gallery/gallery15.jpg 1x, img/gallery/gallery15-2x.jpg 2x">
+                <img class="gallery__slide-image" src="img/gallery/gallery15.jpg" alt="картина">
+              </picture>
+            </button>
+            <button class="gallery__slide">
+              <picture>
+                <source srcset="img/gallery/gallery19.jpg 1x, img/gallery/gallery19-2x.jpg 2x">
+                <img class="gallery__slide-image" src="img/gallery/gallery19.jpg" alt="картина">
+              </picture>
+            </button>
+            <button class="gallery__slide">
+              <picture>
+                <source srcset="img/gallery/gallery20.jpg 1x, img/gallery/gallery20-2x.jpg 2x">
+                <img class="gallery__slide-image" src="img/gallery/gallery20.jpg" alt="картина">
+              </picture>
+            </button>
+            <button class="gallery__slide">
+              <picture>
+                <source srcset="img/gallery/gallery21.jpg 1x, img/gallery/gallery21-2x.jpg 2x">
+                <img class="gallery__slide-image" src="img/gallery/gallery21.jpg" alt="картина">
+              </picture>
+            </button>
+            <button class="gallery__slide">
+              <picture>
+                <source srcset="img/gallery/gallery4.jpg 1x, img/gallery/gallery4-2x.jpg 2x">
+                <img class="gallery__slide-image" src="img/gallery/gallery4.jpg" alt="картина">
+              </picture>
+            </button>
+            <button class="gallery__slide">
+              <picture>
+                <source srcset="img/gallery/gallery5.jpg 1x, img/gallery/gallery5-2x.jpg 2x">
+                <img class="gallery__slide-image" src="img/gallery/gallery5.jpg" alt="картина">
+              </picture>
+            </button>
+            <button class="gallery__slide">
+              <picture>
+                <source srcset="img/gallery/gallery6.jpg 1x, img/gallery/gallery6-2x.jpg 2x">
+                <img class="gallery__slide-image" src="img/gallery/gallery6.jpg" alt="картина">
+              </picture>
+            </button>
+            <button class="gallery__slide">
+              <picture>
+                <source srcset="img/gallery/gallery10.jpg 1x, img/gallery/gallery10-2x.jpg 2x">
+                <img class="gallery__slide-image" src="img/gallery/gallery10.jpg" alt="картина">
+              </picture>
+            </button>
+            <button class="gallery__slide">
+              <picture>
+                <source srcset="img/gallery/gallery11.jpg 1x, img/gallery/gallery11-2x.jpg 2x">
+                <img class="gallery__slide-image" src="img/gallery/gallery11.jpg" alt="картина">
+              </picture>
+            </button>
+            <button class="gallery__slide">
+              <picture>
+                <source srcset="img/gallery/gallery12.jpg 1x, img/gallery/gallery12-2x.jpg 2x">
+                <img class="gallery__slide-image" src="img/gallery/gallery12.jpg" alt="картина">
+              </picture>
+            </button>
+            <button class="gallery__slide">
+              <picture>
+                <source srcset="img/gallery/gallery16.jpg 1x, img/gallery/gallery16-2x.jpg 2x">
+                <img class="gallery__slide-image" src="img/gallery/gallery16.jpg" alt="картина">
+              </picture>
+            </button>
+            <button class="gallery__slide">
+              <picture>
+                <source srcset="img/gallery/gallery17.jpg 1x, img/gallery/gallery17-2x.jpg 2x">
+                <img class="gallery__slide-image" src="img/gallery/gallery17.jpg" alt="картина">
+              </picture>
+            </button>
+            <button class="gallery__slide">
+              <picture>
+                <source srcset="img/gallery/gallery18.jpg 1x, img/gallery/gallery18-2x.jpg 2x">
+                <img class="gallery__slide-image" src="img/gallery/gallery18.jpg" alt="картина">
+              </picture>
+            </button>
+            <button class="gallery__slide">
+              <picture>
+                <source srcset="img/gallery/gallery22.jpg 1x, img/gallery/gallery22-2x.jpg 2x">
+                <img class="gallery__slide-image" src="img/gallery/gallery22.jpg" alt="картина">
+              </picture>
+            </button>
+            <button class="gallery__slide">
+              <picture>
+                <source srcset="img/gallery/gallery23.jpg 1x, img/gallery/gallery23-2x.jpg 2x">
+                <img class="gallery__slide-image" src="img/gallery/gallery23.jpg" alt="картина">
+              </picture>
+            </button>
+            <button class="gallery__slide">
+              <picture>
+                <source srcset="img/gallery/gallery24.jpg 1x, img/gallery/gallery24-2x.jpg 2x">
+                <img class="gallery__slide-image" src="img/gallery/gallery24.jpg" alt="картина">
+              </picture>
+            </button>
           </div>
         </div>
         <p class="gallery__text-mob">
@@ -818,7 +924,7 @@
                         <h3 class="accor__item-empty-right-title bold-600">Здесь пока пусто</h3>
                         <p class="accor__item-empty-right-desc">А в галерее вы всегда можете найти что-то интересное для
                           себя</p>
-                        <a href="" class="accor__item-empty-right-link">В галерею</a>
+                        <a class="accor__item-empty-right-link" href="">В галерею</a>
                       </div>
                     </li>
                   </ul>
@@ -961,7 +1067,7 @@
     <section class="events">
       <div class="container">
         <h2 class="events__title regular-48">События</h2>
-        <div class="events__slider">
+        <div class="events__slider events__slider-box">
           <div class="events__cards events__wrapper">
             <div class="events__slide events__card events__card1">
               <img class="events__img" src="img/events/ev1.jpg" srcset="img/events/ev1-2x.jpg 2x" alt="картина">
@@ -1026,7 +1132,7 @@
                 </div>
               </div>
             </div>
-            <div class="events__slide events__card events__card4 d-none">
+            <div class="events__slide events__card events__card4">
               <img class="events__img" src="img/events/ev4.jpg" srcset="img/events/ev4-2x.jpg 2x" alt="картина">
               <div class="events__info">
                 <div class="events__desc">
@@ -1046,7 +1152,7 @@
                 </div>
               </div>
             </div>
-            <div class="events__slide events__card events__card5 d-none">
+            <div class="events__slide events__card events__card5">
               <img class="events__img" src="img/events/ev5.jpg" srcset="img/events/ev5-2x.jpg 2x" alt="картина">
               <div class="events__info">
                 <div class="events__desc">
@@ -1068,7 +1174,7 @@
               </div>
             </div>
           </div>
-          <div class="events-pagination"></div>
+          <div class="events__pagination"></div>
         </div>
         <div class="events__button-box">
           <button class="events__btn">Все события</button>
@@ -1349,12 +1455,12 @@
               </div>
               <div class="projects__slide projects__slide-8">
                 <a class="projects__slide-link" href="">
-                  <img class="projects__slide-img" src="img/projects/1.png" alt="логотип партнёра">
+                  <img class="projects__slide-img" src="img/projects/8.png" alt="логотип партнёра">
                 </a>
               </div>
               <div class="projects__slide projects__slide-9">
                 <a class="projects__slide-link" href="">
-                  <img class="projects__slide-img" src="img/projects/1.png" alt="логотип партнёра">
+                  <img class="projects__slide-img" src="img/projects/9.png" alt="логотип партнёра">
                 </a>
               </div>
             </div>
@@ -1364,6 +1470,42 @@
         </div>
       </div>
     </section>
+    <section class="contacts">
+      <h2 class="contacts__title container regular-48">Контакты</h2>
+      <div class="contacts__container">
+        <div class="contacts__left">
+          <div class="contacts__form-box">
+            <span class="contacts__desc bold-600">Шоурум №4</span>
+            <span class="contacts__address regular-16">Леонтьевский переулок, дом 5/1</span>
+            <h3 class="contacts__form-subtitle">Заказать обратный звонок</h3>
+            <form class="contacts__form" action="https://jsonplaceholder.typicode.com/posts" method="POST">
+              <input class="contacts__input regular-16" type="text" name="name" placeholder="Имя*" required
+                data-validate-field="name">
+              <input class="contacts__input regular-16" type="tel" name="tel" placeholder="Телефон*" required
+                data-validate-field="phone">
+              <div class="contacts__btn-box">
+                <button class="contacts__btn" type="submit">Заказать</button>
+              </div>
+            </form>
+            <div class="contacts__social">
+              <h3 class="contacts__social-subtitle">Связаться в один клик</h3>
+              <a class="contacts__link" href="" target="_blank">
+                <img class="contacts__icon" src="img/contacts/Whatsapp.svg" alt="Иконка ватцап">
+              </a>
+              <a class="contacts__link" href="" target="_blank">
+                <img class="contacts__icon" src="img/contacts/Telegram.svg" alt="Иконка телеграм">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="contacts__right">
+          <div class="contacts__map" id="map"></div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+
+    </footer>
   </main>
 </body>
 

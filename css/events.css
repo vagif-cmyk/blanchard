@@ -5,7 +5,7 @@
 .events__info {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   height: 100%;
   padding: 13px 19px 48px 50px;
 }
@@ -27,6 +27,10 @@
   border: 1px solid #CACACA;
   animation-name: show-drop;
   animation-duration: 400ms;
+}
+
+.events__card4, .events__card5, .events__pagination {
+  display: none;
 }
 
 .events__img {

@@ -1,7 +1,7 @@
 .editions {
   padding: 80px 0;
   color: #fff;
-  background: url('../img/editions/editions-bgr.jpg');
+  background: url('../img/editions/editions-bgr.jpg') center / cover no-repeat ;
 }
 
 .editions__flex {
@@ -51,7 +51,6 @@
 .editions__item {
   display: flex;
   align-items: center;
-  /* margin-bottom: 20px; */
 }
 
 .editions__label {

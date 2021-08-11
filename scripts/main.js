@@ -1,3 +1,11 @@
+const windowWidth = Math.max(
+  document.body.scrollWidth,
+  document.documentElement.scrollWidth,
+  document.body.offsetWidth,
+  document.documentElement.offsetWidth,
+  document.body.clientWidth,
+  document.documentElement.clientWidth
+);
 document.querySelector('.burger').addEventListener('click', () => openMenu());
 document.querySelector('.header-nav__close').addEventListener('click', () => closeMenu());
 
@@ -31,124 +39,103 @@ document.querySelectorAll('.editions__item').forEach(elem => {
   });
 });
 
+(function () {
 
-// init swiper editions
-const sliderEditions = new Swiper('.editions__slider', {
-  direction: 'horizontal',
-  loop: true,
-  slidesPerView: 2,
-  spaceBetween: 50,
-  wrapperClass: 'editions__wrapper',
-  slideClass: 'editions__slide',
+  const breakpointSliderEditions = window.matchMedia('(min-width:670px)');
+  let editionsSlider;
 
-  pagination: {
-    el: '.editions__swiper-pagination',
-    type: 'fraction',
-    clickable: true,
-  },
+  const breakpointChecker = function () {
 
-  navigation: {
-    nextEl: '.editions__swiper-button-next',
-    prevEl: '.editions__swiper-button-prev',
-  },
-  breakpoints: {
-    1300: {
-      slidesPerView: 3,
+    if (breakpointSliderEditions.matches === true) {
+
+      return enableSwiperEditions();
+
+    } else if (breakpointSliderEditions.matches === false) {
+
+      if (editionsSlider !== undefined) editionsSlider.destroy(true, true);
+
+      return;
+    }
+  };
+
+  const enableSwiperEditions = function () {
+
+    editionsSlider = new Swiper('.editions__slider', {
+      direction: 'horizontal',
+      loop: true,
+      slidesPerView: 2,
       spaceBetween: 50,
-    },
-    1000: {
-      spaceBetween: 50,
-    },
-    568: {
-      spaceBetween: 34,
-    },
-  },
-});
+      wrapperClass: 'editions__wrapper',
+      slideClass: 'editions__slide',
 
-swiperMoboleDestoy(sliderEditions);
+      pagination: {
+        el: '.editions__swiper-pagination',
+        type: 'fraction',
+        clickable: true,
+      },
 
-window.addEventListener('resize', () => {
-  const windowWidth = Math.max(
-    document.body.scrollWidth,
-    document.documentElement.scrollWidth,
-    document.body.offsetWidth,
-    document.documentElement.offsetWidth,
-    document.body.clientWidth,
-    document.documentElement.clientWidth
-  );
-  if (windowWidth < 670) {
-    sliderEditions.destroy();
-  }
-});
-eventsCardDNone();
-initSwiperEvents();
-function initSwiperEvents() {
-  const windowWidth = Math.max(
-    document.body.scrollWidth,
-    document.documentElement.scrollWidth,
-    document.body.offsetWidth,
-    document.documentElement.offsetWidth,
-    document.body.clientWidth,
-    document.documentElement.clientWidth
-  );
-  if (windowWidth < 671) {
-    document.querySelector('.events__btn').classList.add('d-none');
-    document.querySelectorAll('.events__card').forEach(e => { e.classList.remove('d-none') });
+      navigation: {
+        nextEl: '.editions__swiper-button-next',
+        prevEl: '.editions__swiper-button-prev',
+      },
+      breakpoints: {
+        1300: {
+          slidesPerView: 3,
+          spaceBetween: 50,
+        },
+        1000: {
+          spaceBetween: 50,
+        },
+        568: {
+          spaceBetween: 34,
+        },
+      },
+    });
+  };
 
-    const swiper = new Swiper('.events__slider', {
+  breakpointSliderEditions.addListener(breakpointChecker);
+
+  breakpointChecker();
+})();
+
+(function () {
+
+  const breakpointSliderEvents = window.matchMedia('(min-width:670px)');
+  let eventsSwiper;
+
+  const breakpointChecker = function () {
+
+    if (breakpointSliderEvents.matches === true) {
+
+      if (eventsSwiper !== undefined) eventsSwiper.destroy(true, true);
+
+      return;
+
+    } else if (breakpointSliderEvents.matches === false) {
+
+      return enableSwiperEvents();
+    }
+  };
+
+  const enableSwiperEvents = function () {
+
+    eventsSwiper = new Swiper('.events__slider', {
       direction: 'horizontal',
       loop: true,
       wrapperClass: 'events__wrapper',
       slideClass: 'events__slide',
 
       pagination: {
-        el: '.events-pagination',
+        el: '.events__pagination',
       },
     });
-  }
-}
-function eventsCardDNone() {
-  const windowWidth = Math.max(
-    document.body.scrollWidth,
-    document.documentElement.scrollWidth,
-    document.body.offsetWidth,
-    document.documentElement.offsetWidth,
-    document.body.clientWidth,
-    document.documentElement.clientWidth
-  );
-  if (windowWidth < 950) {
-    document.querySelector('.events__card3').classList.add('d-none');
-  }
-}
+  };
 
-window.addEventListener('resize', () => {
-  const windowWidth = Math.max(
-    document.body.scrollWidth,
-    document.documentElement.scrollWidth,
-    document.body.offsetWidth,
-    document.documentElement.offsetWidth,
-    document.body.clientWidth,
-    document.documentElement.clientWidth
-  );
-  if (windowWidth < 950) {
-    document.querySelector('.events__card3').classList.add('d-none');
-  }
-  if (windowWidth < 671) {
-    document.querySelector('.events__btn').classList.add('d-none');
-    document.querySelectorAll('.events__card').forEach(e => { e.classList.remove('d-none') });
+  breakpointSliderEvents.addListener(breakpointChecker);
 
-    const swiper = new Swiper('.events__slider', {
-      direction: 'horizontal',
-      loop: true,
-      wrapperClass: 'events__wrapper',
-      slideClass: 'events__slide',
+  breakpointChecker();
+})();
 
-      pagination: {
-        el: '.events-pagination',
-      },
-    });
-  }
-});
 //  init select
 const element = document.querySelector('select');
 
@@ -266,20 +253,20 @@ tippy('.projects__tyl-3', {
   theme: 'violet',
 });
 
-function swiperMoboleDestoy(swiper) {
-  const windowWidth = Math.max(
-    document.body.scrollWidth,
-    document.documentElement.scrollWidth,
-    document.body.offsetWidth,
-    document.documentElement.offsetWidth,
-    document.body.clientWidth,
-    document.documentElement.clientWidth
-  );
-  if (windowWidth < 670) {
-    swiper.destroy();
-  }
+// function swiperMoboleDestoy(swiper) {
+//   const windowWidth = Math.max(
+//     document.body.scrollWidth,
+//     document.documentElement.scrollWidth,
+//     document.body.offsetWidth,
+//     document.documentElement.offsetWidth,
+//     document.body.clientWidth,
+//     document.documentElement.clientWidth
+//   );
+//   if (windowWidth < 670) {
+//     swiper.destroy();
+//   }
+// }
 
-}
 // функция которая откроет меню.
 function openMenu() {
   document.body.style.overflow = 'hidden';
@@ -386,3 +373,82 @@ function showTabArtist(e) {
     });
   });
 }
+
+ymaps.ready(init);
+
+function init() {
+
+  var myMap = new ymaps.Map("map", {
+
+    center: [55.733835, 37.588227],
+    zoom: 10,
+
+  });
+
+  var myPlacemark = new ymaps.Placemark([55.733835, 37.588227], {}, {
+    iconLayout: 'default#image',
+    iconImageHref: '../img/contacts/map-mark.svg',
+    iconImageSize: [20, 20]
+  });
+
+  var zoomControl = new ymaps.control.ZoomControl({
+    options: {
+      size: 'small',
+    },
+  });
+
+  myMap.controls.remove('searchControl');
+  myMap.controls.remove('zoomControl');
+  myMap.controls.remove('typeSelector');
+  myMap.controls.remove('rulerControl');
+  myMap.controls.remove('trafficControl');
+  myMap.controls.remove('fullscreenControl');
+
+  myMap.controls.add(zoomControl);
+  myMap.geoObjects.add(myPlacemark);
+}
+
+// валидатор формы
+new JustValidate('.contacts__form', {
+
+  colorWrong: 'red',
+  messages: {
+    name: {
+      minLength: 'Имя должно содержать минимум 2 символа',
+      maxLength: 'Имя не должно содержать больше 10 символов',
+      required: 'Недопустимый формат',
+      function: 'Имя не должно содержать цифры',
+    },
+    phone: {
+      required: 'Недопустимый формат',
+      function: 'Введите 10 цифр'
+    },
+  },
+  rules: {
+
+    name: {
+      required: true,
+      minLength: 2,
+      maxLength: 10,
+
+      function: (name, value) => {
+        return value.search(/\d/) === -1;
+      },
+    },
+    phone: {
+      required: true,
+
+      function: (name, value) => {
+        const phone = selector.inputmask.unmaskedvalue();
+
+        return Number(phone) && phone.length === 10;
+      }
+    },
+  }
+});
+
+// маскирование
+var selector = document.querySelector("input[type='tel']");
+
+var im = new Inputmask("+7(999)-999-99-99");
+im.mask(selector);
