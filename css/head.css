@@ -18,15 +18,13 @@
   font-weight: 600;
   font-style: normal;
 }
-body {
-  min-width: 320px;
-}
 
 * {
   box-sizing: border-box;
 }
 
 body {
+  min-width: 320px;
   font-family: 'Open Sans', sans-serif;
 }
 

@@ -261,6 +261,8 @@
 }
 
 .editions__slide-title {
+  display: inline-block;
+  margin: 0;
   font-weight: 700;
   font-size: 16px;
   line-height: calc(22 / 16);
@@ -273,13 +275,14 @@
   line-height: calc(22 / 16);
 }
 
-.editions__price-box {
+/* .editions__price-box {
   display: flex;
   justify-content: space-between;
-}
+} */
 
 .editions__slide-price {
   display: block;
+  float: right;
   font-weight: 400;
   font-size: 16px;
   font-style: italic;

@@ -253,20 +253,6 @@ tippy('.projects__tyl-3', {
   theme: 'violet',
 });
 
-// function swiperMoboleDestoy(swiper) {
-//   const windowWidth = Math.max(
-//     document.body.scrollWidth,
-//     document.documentElement.scrollWidth,
-//     document.body.offsetWidth,
-//     document.documentElement.offsetWidth,
-//     document.body.clientWidth,
-//     document.documentElement.clientWidth
-//   );
-//   if (windowWidth < 670) {
-//     swiper.destroy();
-//   }
-// }
-
 // функция которая откроет меню.
 function openMenu() {
   document.body.style.overflow = 'hidden';
@@ -382,8 +368,13 @@ function init() {
 
     center: [55.733835, 37.588227],
     zoom: 10,
-
-  });
+    controls: ['geolocationControl', 'zoomControl']
+  },
+    {
+      geolocationControlPosition: { top: "300px", right: "20px" },
+      zoomControlSize: "small",
+      zoomControlPosition: { top: "230px", right: "20px" },
+    });
 
   var myPlacemark = new ymaps.Placemark([55.733835, 37.588227], {}, {
     iconLayout: 'default#image',
@@ -391,20 +382,6 @@ function init() {
     iconImageSize: [20, 20]
   });
 
-  var zoomControl = new ymaps.control.ZoomControl({
-    options: {
-      size: 'small',
-    },
-  });
-
-  myMap.controls.remove('searchControl');
-  myMap.controls.remove('zoomControl');
-  myMap.controls.remove('typeSelector');
-  myMap.controls.remove('rulerControl');
-  myMap.controls.remove('trafficControl');
-  myMap.controls.remove('fullscreenControl');
-
-  myMap.controls.add(zoomControl);
   myMap.geoObjects.add(myPlacemark);
 }
 
