@@ -47,9 +47,11 @@
   <link rel="stylesheet" href="css/projects.css">
   <link rel="stylesheet" href="css/contacts.css">
   <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/modal.css">
   <link rel="stylesheet" href="css/media.css">
 
   <script defer src="scripts/main.js"></script>
+  <script defer src="scripts/modal.js"></script>
 
 </head>
 
@@ -247,150 +249,566 @@
             <button class="swiper-button-next"></button>
           </div>
           <div class="gallery__wrapper">
-            <button class="gallery__slide">
+            <button class="gallery__slide" data-path="1">
               <picture>
                 <source srcset="img/gallery/gallery1.jpg 1x, img/gallery/gallery1-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery1.jpg" alt="картина">
               </picture>
             </button>
-            <button class="gallery__slide">
+            <button class="gallery__slide" data-path="2">
               <picture>
                 <source srcset="img/gallery/gallery2.jpg 1x, img/gallery/gallery2-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery2.jpg" alt="картина">
               </picture>
             </button>
-            <button class="gallery__slide">
+            <button class="gallery__slide" data-path="3">
               <picture>
                 <source srcset="img/gallery/gallery3.jpg 1x, img/gallery/gallery3-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery3.jpg" alt="картина">
               </picture>
             </button>
-            <button class="gallery__slide">
+            <button class="gallery__slide" data-path="4">
               <picture>
                 <source srcset="img/gallery/gallery7.jpg 1x, img/gallery/gallery7-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery7.jpg" alt="картина">
               </picture>
             </button>
-            <button class="gallery__slide">
+            <button class="gallery__slide" data-path="5">
               <picture>
                 <source srcset="img/gallery/gallery8.jpg 1x, img/gallery/gallery8-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery8.jpg" alt="картина">
               </picture>
             </button>
-            <button class="gallery__slide">
+            <button class="gallery__slide" data-path="6">
               <picture>
                 <source srcset="img/gallery/gallery9.jpg 1x, img/gallery/gallery9-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery9.jpg" alt="картина">
               </picture>
             </button>
-            <button class="gallery__slide">
+            <button class="gallery__slide" data-path="7">
               <picture>
                 <source srcset="img/gallery/gallery13.jpg 1x, img/gallery/gallery13-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery13.jpg" alt="картина">
               </picture>
             </button>
-            <button class="gallery__slide">
+            <button class="gallery__slide" data-path="8">
               <picture>
                 <source srcset="img/gallery/gallery14.jpg 1x, img/gallery/gallery14-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery14.jpg" alt="картина">
               </picture>
             </button>
-            <button class="gallery__slide">
+            <button class="gallery__slide" data-path="9">
               <picture>
                 <source srcset="img/gallery/gallery15.jpg 1x, img/gallery/gallery15-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery15.jpg" alt="картина">
               </picture>
             </button>
-            <button class="gallery__slide">
+            <button class="gallery__slide" data-path="10">
               <picture>
                 <source srcset="img/gallery/gallery19.jpg 1x, img/gallery/gallery19-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery19.jpg" alt="картина">
               </picture>
             </button>
-            <button class="gallery__slide">
+            <button class="gallery__slide" data-path="11">
               <picture>
                 <source srcset="img/gallery/gallery20.jpg 1x, img/gallery/gallery20-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery20.jpg" alt="картина">
               </picture>
             </button>
-            <button class="gallery__slide">
+            <button class="gallery__slide" data-path="12">
               <picture>
                 <source srcset="img/gallery/gallery21.jpg 1x, img/gallery/gallery21-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery21.jpg" alt="картина">
               </picture>
             </button>
-            <button class="gallery__slide">
+            <button class="gallery__slide" data-path="13">
               <picture>
                 <source srcset="img/gallery/gallery4.jpg 1x, img/gallery/gallery4-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery4.jpg" alt="картина">
               </picture>
             </button>
-            <button class="gallery__slide">
+            <button class="gallery__slide" data-path="14">
               <picture>
                 <source srcset="img/gallery/gallery5.jpg 1x, img/gallery/gallery5-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery5.jpg" alt="картина">
               </picture>
             </button>
-            <button class="gallery__slide">
+            <button class="gallery__slide" data-path="15">
               <picture>
                 <source srcset="img/gallery/gallery6.jpg 1x, img/gallery/gallery6-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery6.jpg" alt="картина">
               </picture>
             </button>
-            <button class="gallery__slide">
+            <button class="gallery__slide" data-path="16">
               <picture>
                 <source srcset="img/gallery/gallery10.jpg 1x, img/gallery/gallery10-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery10.jpg" alt="картина">
               </picture>
             </button>
-            <button class="gallery__slide">
+            <button class="gallery__slide" data-path="17">
               <picture>
                 <source srcset="img/gallery/gallery11.jpg 1x, img/gallery/gallery11-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery11.jpg" alt="картина">
               </picture>
             </button>
-            <button class="gallery__slide">
+            <button class="gallery__slide" data-path="18">
               <picture>
                 <source srcset="img/gallery/gallery12.jpg 1x, img/gallery/gallery12-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery12.jpg" alt="картина">
               </picture>
             </button>
-            <button class="gallery__slide">
+            <button class="gallery__slide" data-path="19">
               <picture>
                 <source srcset="img/gallery/gallery16.jpg 1x, img/gallery/gallery16-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery16.jpg" alt="картина">
               </picture>
             </button>
-            <button class="gallery__slide">
+            <button class="gallery__slide" data-path="20">
               <picture>
                 <source srcset="img/gallery/gallery17.jpg 1x, img/gallery/gallery17-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery17.jpg" alt="картина">
               </picture>
             </button>
-            <button class="gallery__slide">
+            <button class="gallery__slide" data-path="21">
               <picture>
                 <source srcset="img/gallery/gallery18.jpg 1x, img/gallery/gallery18-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery18.jpg" alt="картина">
               </picture>
             </button>
-            <button class="gallery__slide">
+            <button class="gallery__slide" data-path="22">
               <picture>
                 <source srcset="img/gallery/gallery22.jpg 1x, img/gallery/gallery22-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery22.jpg" alt="картина">
               </picture>
             </button>
-            <button class="gallery__slide">
+            <button class="gallery__slide" data-path="23">
               <picture>
                 <source srcset="img/gallery/gallery23.jpg 1x, img/gallery/gallery23-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery23.jpg" alt="картина">
               </picture>
             </button>
-            <button class="gallery__slide">
+            <button class="gallery__slide" data-path="24">
               <picture>
                 <source srcset="img/gallery/gallery24.jpg 1x, img/gallery/gallery24-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery24.jpg" alt="картина">
               </picture>
             </button>
+          </div>
+        </div>
+        <div class="modals modals__container">
+          <div class="modals__overlay">
+            <div class="modals__modal modal" data-target="1">
+              <span class="modal__close">&times;</span>
+              <div class="modal__content">
+                <picture>
+                  <source srcset="img/gallery/gallery1.jpg 1x, img/gallery/gallery1-2x.jpg 2x">
+                  <img class="modal__img" src="img/gallery/gallery1.jpg" alt="картина">
+                </picture>
+                <div class="modal__text-content">
+                  <h2 class="modal__title">Казимир Малевич</h2>
+                  <h3 class="modal__img-name">“Женщина с граблями”</h3>
+                  <div class="modal__years">1931-1932</div>
+                  <div class="modal__text regular-16">Далеко-далеко за словесными горами, в стране гласных и согласных
+                    живут рыбные
+                    тексты. Составитель парадигматическая что всеми текст за страну сбить встретил несколько.</div>
+                </div>
+              </div>
+            </div>
+            <div class="modals__modal modal" data-target="2">
+              <span class="modal__close">&times;</span>
+              <div class="modal__content">
+                <picture>
+                  <source srcset="img/gallery/gallery2.jpg 1x, img/gallery/gallery2-2x.jpg 2x">
+                  <img class="modal__img" src="img/gallery/gallery2.jpg" alt="картина">
+                </picture>
+                <div class="modal__text-content">
+                  <h2 class="modal__title">Казимир Малевич</h2>
+                  <h3 class="modal__img-name">“Женщина с граблями”</h3>
+                  <div class="modal__years">1931-1932</div>
+                  <div class="modal__text regular-16">Далеко-далеко за словесными горами в стране гласных и согласных
+                    живут рыбные
+                    тексты. </div>
+                </div>
+              </div>
+            </div>
+            <div class="modals__modal modal" data-target="3">
+              <span class="modal__close">&times;</span>
+              <div class="modal__content">
+                <picture>
+                  <source srcset="img/gallery/gallery3.jpg 1x, img/gallery/gallery3-2x.jpg 2x">
+                  <img class="modal__img" src="img/gallery/gallery3.jpg" alt="картина">
+                </picture>
+                <div class="modal__text-content">
+                  <h2 class="modal__title">Казимир Малевич</h2>
+                  <h3 class="modal__img-name">“Женщина с граблями”</h3>
+                  <div class="modal__years">1931-1932</div>
+                  <div class="modal__text regular-16"> Далеко-далеко за словесными горами в стране гласных и согласных
+                    живут рыбные
+                    Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные Далеко-далеко за
+                    словесными горами в стране гласных и согласных живут рыбные Далеко-далеко за словесными горами в
+                    стране гласных и согласных живут рыбные Далеко-далеко за словесными горами в стране гласных и
+                    согласных живут рыбные
+                    тексты. </div>
+                </div>
+              </div>
+            </div>
+            <div class="modals__modal modal" data-target="4">
+              <span class="modal__close">&times;</span>
+              <div class="modal__content">
+                <picture>
+                  <source srcset="img/gallery/gallery7.jpg 1x, img/gallery/gallery7-2x.jpg 2x">
+                  <img class="modal__img" src="img/gallery/gallery7.jpg" alt="картина">
+                </picture>
+                <div class="modal__text-content">
+                  <h2 class="modal__title">Казимир Малевич</h2>
+                  <h3 class="modal__img-name">“Женщина с граблями”</h3>
+                  <div class="modal__years">1931-1932</div>
+                  <div class="modal__text regular-16">Далеко-далеко за словесными горами в стране гласных и согласных
+                    живут рыбные
+                    тексты. </div>
+                </div>
+              </div>
+            </div>
+            <div class="modals__modal modal" data-target="5">
+              <span class="modal__close">&times;</span>
+              <div class="modal__content">
+                <picture>
+                  <source srcset="img/gallery/gallery13.jpg 1x, img/gallery/gallery8-2x.jpg 2x">
+                  <img class="modal__img" src="img/gallery/gallery8.jpg" alt="картина">
+                </picture>
+                <div class="modal__text-content">
+                  <h2 class="modal__title">Казимир Малевич</h2>
+                  <h3 class="modal__img-name">“Женщина с граблями”</h3>
+                  <div class="modal__years">1931-1932</div>
+                  <div class="modal__text regular-16">Далеко-далеко за словесными горами в стране гласных и согласных
+                    живут рыбные
+                    тексты. </div>
+                </div>
+              </div>
+            </div>
+            <div class="modals__modal modal" data-target="6">
+              <span class="modal__close">&times;</span>
+              <div class="modal__content">
+                <picture>
+                  <source srcset="img/gallery/gallery9.jpg 1x, img/gallery/gallery9-2x.jpg 2x">
+                  <img class="modal__img" src="img/gallery/gallery9.jpg" alt="картина">
+                </picture>
+                <div class="modal__text-content">
+                  <h2 class="modal__title">Казимир Малевич</h2>
+                  <h3 class="modal__img-name">“Женщина с граблями”</h3>
+                  <div class="modal__years">1931-1932</div>
+                  <div class="modal__text regular-16">Далеко-далеко за словесными горами в стране гласных и согласных
+                    живут рыбные
+                    тексты. </div>
+                </div>
+              </div>
+            </div>
+            <div class="modals__modal modal" data-target="7">
+              <span class="modal__close">&times;</span>
+              <div class="modal__content">
+                <picture>
+                  <source srcset="img/gallery/gallery13.jpg 1x, img/gallery/gallery13-2x.jpg 2x">
+                  <img class="modal__img" src="img/gallery/gallery13.jpg" alt="картина">
+                </picture>
+                <div class="modal__text-content">
+                  <h2 class="modal__title">Казимир Малевич</h2>
+                  <h3 class="modal__img-name">“Женщина с граблями”</h3>
+                  <div class="modal__years">1931-1932</div>
+                  <div class="modal__text regular-16">Далеко-далеко за словесными горами в стране гласных и согласных
+                    живут рыбные
+                    тексты. </div>
+                </div>
+              </div>
+            </div>
+            <div class="modals__modal modal" data-target="8">
+              <span class="modal__close">&times;</span>
+              <div class="modal__content">
+                <picture>
+                  <source srcset="img/gallery/gallery14.jpg 1x, img/gallery/gallery14-2x.jpg 2x">
+                  <img class="modal__img" src="img/gallery/gallery14.jpg" alt="картина">
+                </picture>
+                <div class="modal__text-content">
+                  <h2 class="modal__title">Казимир Малевич</h2>
+                  <h3 class="modal__img-name">“Женщина с граблями”</h3>
+                  <div class="modal__years">1931-1932</div>
+                  <div class="modal__text regular-16">Далеко-далеко за словесными горами в стране гласных и согласных
+                    живут рыбные
+                    тексты. </div>
+                </div>
+              </div>
+            </div>
+            <div class="modals__modal modal" data-target="9">
+              <span class="modal__close">&times;</span>
+              <div class="modal__content">
+                <picture>
+                  <source srcset="img/gallery/gallery15.jpg 1x, img/gallery/gallery15-2x.jpg 2x">
+                  <img class="modal__img" src="img/gallery/gallery15.jpg" alt="картина">
+                </picture>
+                <div class="modal__text-content">
+                  <h2 class="modal__title">Казимир Малевич</h2>
+                  <h3 class="modal__img-name">“Женщина с граблями”</h3>
+                  <div class="modal__years">1931-1932</div>
+                  <div class="modal__text regular-16">Далеко-далеко за словесными горами в стране гласных и согласных
+                    живут рыбные
+                    тексты. </div>
+                </div>
+              </div>
+            </div>
+            <div class="modals__modal modal" data-target="10">
+              <span class="modal__close">&times;</span>
+              <div class="modal__content">
+                <picture>
+                  <source srcset="img/gallery/gallery19.jpg 1x, img/gallery/gallery19-2x.jpg 2x">
+                  <img class="modal__img" src="img/gallery/gallery19.jpg" alt="картина">
+                </picture>
+                <div class="modal__text-content">
+                  <h2 class="modal__title">Казимир Малевич</h2>
+                  <h3 class="modal__img-name">“Женщина с граблями”</h3>
+                  <div class="modal__years">1931-1932</div>
+                  <div class="modal__text regular-16">Далеко-далеко за словесными горами в стране гласных и согласных
+                    живут рыбные
+                    тексты. </div>
+                </div>
+              </div>
+            </div>
+            <div class="modals__modal modal" data-target="11">
+              <span class="modal__close">&times;</span>
+              <div class="modal__content">
+                <picture>
+                  <source srcset="img/gallery/gallery20.jpg 1x, img/gallery/gallery20-2x.jpg 2x">
+                  <img class="modal__img" src="img/gallery/gallery20.jpg" alt="картина">
+                </picture>
+                <div class="modal__text-content">
+                  <h2 class="modal__title">Казимир Малевич</h2>
+                  <h3 class="modal__img-name">“Женщина с граблями”</h3>
+                  <div class="modal__years">1931-1932</div>
+                  <div class="modal__text regular-16">Далеко-далеко за словесными горами в стране гласных и согласных
+                    живут рыбные
+                    тексты. </div>
+                </div>
+              </div>
+            </div>
+            <div class="modals__modal modal" data-target="12">
+              <span class="modal__close">&times;</span>
+              <div class="modal__content">
+                <picture>
+                  <source srcset="img/gallery/gallery21.jpg 1x, img/gallery/gallery21-2x.jpg 2x">
+                  <img class="modal__img" src="img/gallery/gallery21.jpg" alt="картина">
+                </picture>
+                <div class="modal__text-content">
+                  <h2 class="modal__title">Казимир Малевич</h2>
+                  <h3 class="modal__img-name">“Женщина с граблями”</h3>
+                  <div class="modal__years">1931-1932</div>
+                  <div class="modal__text regular-16">Далеко-далеко за словесными горами в стране гласных и согласных
+                    живут рыбные
+                    тексты. </div>
+                </div>
+              </div>
+            </div>
+            <div class="modals__modal modal" data-target="13">
+              <span class="modal__close">&times;</span>
+              <div class="modal__content">
+                <picture>
+                  <source srcset="img/gallery/gallery4.jpg 1x, img/gallery/gallery4-2x.jpg 2x">
+                  <img class="modal__img" src="img/gallery/gallery4.jpg" alt="картина">
+                </picture>
+                <div class="modal__text-content">
+                  <h2 class="modal__title">Казимир Малевич</h2>
+                  <h3 class="modal__img-name">“Женщина с граблями”</h3>
+                  <div class="modal__years">1931-1932</div>
+                  <div class="modal__text regular-16">Далеко-далеко за словесными горами в стране гласных и согласных
+                    живут рыбные
+                    тексты. </div>
+                </div>
+              </div>
+            </div>
+            <div class="modals__modal modal" data-target="14">
+              <span class="modal__close">&times;</span>
+              <div class="modal__content">
+                <picture>
+                  <source srcset="img/gallery/gallery5.jpg 1x, img/gallery/gallery5-2x.jpg 2x">
+                  <img class="modal__img" src="img/gallery/gallery5.jpg" alt="картина">
+                </picture>
+                <div class="modal__text-content">
+                  <h2 class="modal__title">Казимир Малевич</h2>
+                  <h3 class="modal__img-name">“Женщина с граблями”</h3>
+                  <div class="modal__years">1931-1932</div>
+                  <div class="modal__text regular-16">Далеко-далеко за словесными горами в стране гласных и согласных
+                    живут рыбные
+                    тексты. </div>
+                </div>
+              </div>
+            </div>
+            <div class="modals__modal modal" data-target="15">
+              <span class="modal__close">&times;</span>
+              <div class="modal__content">
+                <picture>
+                  <source srcset="img/gallery/gallery6.jpg 1x, img/gallery/gallery6-2x.jpg 2x">
+                  <img class="modal__img" src="img/gallery/gallery6.jpg" alt="картина">
+                </picture>
+                <div class="modal__text-content">
+                  <h2 class="modal__title">Казимир Малевич</h2>
+                  <h3 class="modal__img-name">“Женщина с граблями”</h3>
+                  <div class="modal__years">1931-1932</div>
+                  <div class="modal__text regular-16">Далеко-далеко за словесными горами в стране гласных и согласных
+                    живут рыбные
+                    тексты. </div>
+                </div>
+              </div>
+            </div>
+            <div class="modals__modal modal" data-target="16">
+              <span class="modal__close">&times;</span>
+              <div class="modal__content">
+                <picture>
+                  <source srcset="img/gallery/gallery10.jpg 1x, img/gallery/gallery10-2x.jpg 2x">
+                  <img class="modal__img" src="img/gallery/gallery10.jpg" alt="картина">
+                </picture>
+                <div class="modal__text-content">
+                  <h2 class="modal__title">Казимир Малевич</h2>
+                  <h3 class="modal__img-name">“Женщина с граблями”</h3>
+                  <div class="modal__years">1931-1932</div>
+                  <div class="modal__text regular-16">Далеко-далеко за словесными горами в стране гласных и согласных
+                    живут рыбные
+                    тексты. </div>
+                </div>
+              </div>
+            </div>
+            <div class="modals__modal modal" data-target="17">
+              <span class="modal__close">&times;</span>
+              <div class="modal__content">
+                <picture>
+                  <source srcset="img/gallery/gallery11.jpg 1x, img/gallery/gallery11-2x.jpg 2x">
+                  <img class="modal__img" src="img/gallery/gallery11.jpg" alt="картина">
+                </picture>
+                <div class="modal__text-content">
+                  <h2 class="modal__title">Казимир Малевич</h2>
+                  <h3 class="modal__img-name">“Женщина с граблями”</h3>
+                  <div class="modal__years">1931-1932</div>
+                  <div class="modal__text regular-16">Далеко-далеко за словесными горами в стране гласных и согласных
+                    живут рыбные
+                    тексты. </div>
+                </div>
+              </div>
+            </div>
+            <div class="modals__modal modal" data-target="18">
+              <span class="modal__close">&times;</span>
+              <div class="modal__content">
+                <picture>
+                  <source srcset="img/gallery/gallery12.jpg 1x, img/gallery/gallery12-2x.jpg 2x">
+                  <img class="modal__img" src="img/gallery/gallery12.jpg" alt="картина">
+                </picture>
+                <div class="modal__text-content">
+                  <h2 class="modal__title">Казимир Малевич</h2>
+                  <h3 class="modal__img-name">“Женщина с граблями”</h3>
+                  <div class="modal__years">1931-1932</div>
+                  <div class="modal__text regular-16">Далеко-далеко за словесными горами в стране гласных и согласных
+                    живут рыбные
+                    тексты. </div>
+                </div>
+              </div>
+            </div>
+            <div class="modals__modal modal" data-target="19">
+              <span class="modal__close">&times;</span>
+              <div class="modal__content">
+                <picture>
+                  <source srcset="img/gallery/gallery16.jpg 1x, img/gallery/gallery16-2x.jpg 2x">
+                  <img class="modal__img" src="img/gallery/gallery16.jpg" alt="картина">
+                </picture>
+                <div class="modal__text-content">
+                  <h2 class="modal__title">Казимир Малевич</h2>
+                  <h3 class="modal__img-name">“Женщина с граблями”</h3>
+                  <div class="modal__years">1931-1932</div>
+                  <div class="modal__text regular-16">Далеко-далеко за словесными горами в стране гласных и согласных
+                    живут рыбные
+                    тексты. </div>
+                </div>
+              </div>
+            </div>
+            <div class="modals__modal modal" data-target="20">
+              <span class="modal__close">&times;</span>
+              <div class="modal__content">
+                <picture>
+                  <source srcset="img/gallery/gallery17.jpg 1x, img/gallery/gallery17-2x.jpg 2x">
+                  <img class="modal__img" src="img/gallery/gallery17.jpg" alt="картина">
+                </picture>
+                <div class="modal__text-content">
+                  <h2 class="modal__title">Казимир Малевич</h2>
+                  <h3 class="modal__img-name">“Женщина с граблями”</h3>
+                  <div class="modal__years">1931-1932</div>
+                  <div class="modal__text regular-16">Далеко-далеко за словесными горами в стране гласных и согласных
+                    живут рыбные
+                    тексты. </div>
+                </div>
+              </div>
+            </div>
+            <div class="modals__modal modal" data-target="21">
+              <span class="modal__close">&times;</span>
+              <div class="modal__content">
+                <picture>
+                  <source srcset="img/gallery/gallery18.jpg 1x, img/gallery/gallery18-2x.jpg 2x">
+                  <img class="modal__img" src="img/gallery/gallery18.jpg" alt="картина">
+                </picture>
+                <div class="modal__text-content">
+                  <h2 class="modal__title">Казимир Малевич</h2>
+                  <h3 class="modal__img-name">“Женщина с граблями”</h3>
+                  <div class="modal__years">1931-1932</div>
+                  <div class="modal__text regular-16">Далеко-далеко за словесными горами в стране гласных и согласных
+                    живут рыбные
+                    тексты. </div>
+                </div>
+              </div>
+            </div>
+            <div class="modals__modal modal" data-target="22">
+              <span class="modal__close">&times;</span>
+              <div class="modal__content">
+                <picture>
+                  <source srcset="img/gallery/gallery22.jpg 1x, img/gallery/gallery22-2x.jpg 2x">
+                  <img class="modal__img" src="img/gallery/gallery22.jpg" alt="картина">
+                </picture>
+                <div class="modal__text-content">
+                  <h2 class="modal__title">Казимир Малевич</h2>
+                  <h3 class="modal__img-name">“Женщина с граблями”</h3>
+                  <div class="modal__years">1931-1932</div>
+                  <div class="modal__text regular-16">Далеко-далеко за словесными горами в стране гласных и согласных
+                    живут рыбные
+                    тексты. </div>
+                </div>
+              </div>
+            </div>
+            <div class="modals__modal modal" data-target="23">
+              <span class="modal__close">&times;</span>
+              <div class="modal__content">
+                <picture>
+                  <source srcset="img/gallery/gallery23.jpg 1x, img/gallery/gallery23-2x.jpg 2x">
+                  <img class="modal__img" src="img/gallery/gallery23.jpg" alt="картина">
+                </picture>
+                <div class="modal__text-content">
+                  <h2 class="modal__title">Казимир Малевич</h2>
+                  <h3 class="modal__img-name">“Женщина с граблями”</h3>
+                  <div class="modal__years">1931-1932</div>
+                  <div class="modal__text regular-16">Далеко-далеко за словесными горами в стране гласных и согласных
+                    живут рыбные
+                    тексты. </div>
+                </div>
+              </div>
+            </div>
+            <div class="modals__modal modal" data-target="24">
+              <span class="modal__close">&times;</span>
+              <div class="modal__content">
+                <picture>
+                  <source srcset="img/gallery/gallery24.jpg 1x, img/gallery/gallery24-2x.jpg 2x">
+                  <img class="modal__img" src="img/gallery/gallery24.jpg" alt="картина">
+                </picture>
+                <div class="modal__text-content">
+                  <h2 class="modal__title">Казимир Малевич</h2>
+                  <h3 class="modal__img-name">“Женщина с граблями”</h3>
+                  <div class="modal__years">1931-1932</div>
+                  <div class="modal__text regular-16">Далеко-далеко за словесными горами в стране гласных и согласных
+                    живут рыбные
+                    тексты. </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <p class="gallery__text-mob">
