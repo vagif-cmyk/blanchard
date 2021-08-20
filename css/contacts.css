@@ -28,7 +28,7 @@
 
 .contacts__title {
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 .contacts__text-mob {
   display: none;
@@ -36,11 +36,11 @@
   margin-bottom: 20px;
 }
 .contacts__address {
-  margin-bottom: 27px;
+  margin-bottom: 32px;
 }
 
 .contacts__form-subtitle {
-  margin-bottom: 19px;
+  margin-bottom: 14px;
   font-weight: 400;
   font-size: 24px;
   line-height: calc(32 /24);
@@ -52,7 +52,7 @@
 }
 
 .contacts__input {
-  margin-bottom: 23px;
+  margin-bottom: 20px;
   padding: 4px 24px;
   border: 1px solid #333;
   border-radius: 100px;
@@ -70,7 +70,7 @@
 
 .contacts__btn {
   position: relative;
-  padding: 17px 35px;
+  padding: 17px 33px;
   border: 2px solid #9D5CD0;
   border-radius: 100px;
   font-weight: 700;
@@ -114,7 +114,7 @@
 }
 
 .contacts__social-subtitle {
-  margin-bottom: 18px;
+  margin-bottom: 12px;
   font-weight: 400;
   font-size: 24px;
   line-height: calc(32 /24);
@@ -132,7 +132,7 @@
 }
 
 .contacts__social :nth-child(2) {
-  margin-right: 20px;
+  margin-right: 12px;
 }
 
 .contacts__map {

@@ -185,9 +185,7 @@ button {
   padding: 4px;
 }
 
-.comein {
-  margin-left: auto;
-}
+
 
 .header__content {
   display: flex;
@@ -205,7 +203,7 @@ button {
 }
 
 .header-nav__list :not(:last-child) {
-  margin-right: 56px;
+  margin-right: 50px;
 }
 
 .header-nav__first-child {
@@ -257,6 +255,10 @@ button {
   padding: 6px;
   transition: .2s;
 }
+.comein {
+  margin-left: auto;
+  padding: 0;
+}
 
 .header-nav__link:focus, .header__select:focus, .comein:focus, .logo:focus {
   background: var(--colorViolet);
@@ -290,8 +292,8 @@ button {
 .dropdown {
   position: relative;
   display: block;
-  margin-right: 96px;
-  padding: 28px 0;
+  margin-right: 86px;
+  padding: 24px 0;
 }
 
 .last-dropdown {
@@ -299,7 +301,7 @@ button {
 }
 
 .dropbtn {
-  padding: 6px;
+  padding: 0;
   font-weight: 400;
   font-size: 18px;
   color: #fff;
@@ -450,7 +452,7 @@ button {
   position: relative;
   display: inline-block;
   top: -4px;
-  left: 5px;
+  left: 0px;
   width: 8px;
   height: 1px;
   background: #fff;
@@ -462,7 +464,7 @@ button {
   position: relative;
   display: inline-block;
   top: -4px;
-  left: -2px;
+  left: -8px;
   width: 8px;
   height: 1px;
   background: #fff;
@@ -525,7 +527,9 @@ button {
 }
 
 .header__search {
-  padding-bottom: 6px;
+  width: 220px;
+  padding: 0;
+  padding-bottom: 4px;
   border-top: none;
   border-right: none;
   border-left: none;
@@ -553,8 +557,9 @@ button {
 .header__form-btn {
   position: absolute;
   content: url('../img/head/search.svg');
-  top: 0;
-  left: -44px;
+  top: 4px;
+  left: -30px;
+  padding: 0;
   background: transparent;
   opacity: 0.8;
   cursor: pointer;

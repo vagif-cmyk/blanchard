@@ -2,7 +2,7 @@
 
 .hero {
   position: relative;
-  padding-top: 187px;
+  padding-top: 171px;
   background: #333;
   overflow: hidden;
 }
@@ -52,15 +52,16 @@
 
 .hero__title {
   margin: 0;
+  margin-bottom: 12px;
   word-wrap: break-word;
   font-weight: 700;
   font-size: 72px;
-  line-height: calc(98 / 72);
+  line-height: calc(90 / 72);
   color: #fff;
 }
 
 .hero__text {
-  margin: 0 0 112px 0;
+  margin: 0 0 95px 0;
   color: #fff;
 }
 
@@ -68,7 +69,7 @@
   position: relative;
   display: inline-block;
   text-align: center;
-  padding: 22px 35px;
+  padding: 20px 33px;
   border: solid 3px transparent;
   border-radius: 100px;
   word-wrap: break-word;

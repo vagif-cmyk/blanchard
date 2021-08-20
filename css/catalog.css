@@ -5,18 +5,18 @@
 .catalog__top {
   display: flex;
   align-items: center;
-  margin-bottom: 23px;
+  margin-bottom: 16px;
 }
 
 .catalog__text {
   max-width: 1080px;
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 38px;
 }
 
 .catalog__title {
   margin: 0;
-  margin-right: 39px;
+  margin-right: 31px;
 }
 
 .countries {
@@ -80,7 +80,8 @@
 .artist {
   display: flex;
   flex-direction: column;
-  width: 48%;
+  width: 47%;
+  /* margin-right: 47px; */
 }
 
 .catalog__content {
@@ -89,6 +90,7 @@
 }
 
 .artist__foto {
+  width: 100%;
   min-height: 360px;
   margin-bottom: 30px;
   object-fit: cover;
@@ -100,11 +102,14 @@
 
 .artist__name {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 6px;
 }
 
 .artist__years {
   display: block;
+  margin-bottom: 4px;
+  color: #b5acac;
+  font-size: 12px;
 }
 
 .artist__not-found-foto {
@@ -142,7 +147,7 @@
 /* accordion */
 
 .accor {
-  width: 48%;
+  width: 50%;
 }
 
 .accor> :first-child {
@@ -151,6 +156,7 @@
 
 .accor__item-names {
   columns: auto 3;
+  column-gap: 0;
   overflow: auto;
 }
 
@@ -190,7 +196,7 @@
   align-items: center;
   z-index: 1;
   margin: 0;
-  padding: 32px 0;
+  padding: 42px 0 40px;
   color: #333;
   cursor: pointer;
   transition: .2s;
@@ -267,12 +273,12 @@
   color: #9D5CD0;
 }
 
-.accor__item-title.ui-state-active {
+/* .accor__item-title.ui-state-active {
   padding-bottom: 30px;
-}
+} */
 
 .accor__item-content {
-  padding: 25px 0;
+  padding: 26px 0;
   border-top: 1px solid #CACACA;
 }
 
