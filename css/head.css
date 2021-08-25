@@ -124,10 +124,10 @@ button {
 .burger__icon, .burger__icon::before, .burger__icon::after {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 0;
   height: 3px;
   margin-top: -1px;
-  margin-left: -14px;
+  /* margin-left: -14px; */
   background-color: #fff;
 }
 
@@ -141,12 +141,12 @@ button {
 
 .burger__icon::before {
   width: 36px;
-  transform: translateY(-9px);
+  transform: translateY(-12px);
 }
 
 .burger__icon::after {
   width: 24px;
-  transform: translateY(8px);
+  transform: translateY(11px);
 }
 
 /* variable */
@@ -280,6 +280,7 @@ button {
 
 .header__search-mob {
   display: none;
+  /* padding: 0; */
   background: transparent;
 }
 

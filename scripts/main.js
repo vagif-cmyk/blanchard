@@ -195,7 +195,7 @@ const sliderGallery = new Swiper('.gallery__slider', {
     769: {
       slidesPerView: 2,
       slidesPerColumn: 2,
-      spaceBetween: 50,
+      spaceBetween: 34,
     },
     670: {
       slidesPerView: 2,
@@ -234,6 +234,11 @@ const swiperProjects = new Swiper('.projects__container', {
       spaceBetween: 34,
     },
     1024: {
+      slidesPerView: 2,
+      spaceBetween: 50,
+    },
+    1024: {
+      slidesPerView: 3,
       spaceBetween: 50,
     },
   }

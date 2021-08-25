@@ -276,7 +276,14 @@
 }
 
 @media (max-width: 1024px) {
-  /* open burger */
+   .logo {
+    padding: 0;
+    min-width: 188px;
+  }
+  .header .logo img {
+    width: 100%;
+    object-fit: cover;
+  }
   .header-nav {
     position: fixed;
     top: 0;
@@ -325,15 +332,29 @@
   }
   /* hero  */
   .hero {
-    padding-top: 98px;
+    padding-top: 100px;
   }
+
   .hero__content {
     max-width: 660px;
-    padding: 105px 0 114px 0;
+    padding: 112px 0 114px 0;
+  }
+  .hero__title {
+    margin-bottom: 9px;
+    line-height: calc(86 / 72);
+  }
+  .hero__text {
+    margin-bottom: 132px;
   }
   /* about */
   .about__content {
     max-width: 100%;
+  }
+  .gallery__filter {
+    max-width: 30%;
+  }
+  .gallery__slider {
+    max-width: 64.5%;
   }
   /* gallery  */
   .modal__text-content {
@@ -358,17 +379,78 @@
   .events__card-text {
     margin-bottom: 27px;
   }
+  /* catalog  */
+  .catalog {
+    padding-top: 78px;
+  }
+  .accor {
+    width: 47%;
+  }
+  .artist {
+    width: 47.2%;
+  }
+  .artist__foto {
+    min-height: 274px;
+  }
+  /* events  */
+  .events__img {
+    min-height: 198px;
+  }
+  .events__info {
+    padding-bottom: 47px;
+  }
+  /* editions */
+  .editions {
+    padding-bottom: 84px;
+  }
+  .editions__block-right {
+    width: 68%;
+  }
+  .editions__slide-img {
+    margin-bottom: 10px;
+  }
+  /* projects  */
+  .projects__title {
+    margin-bottom: 16px;
+  }
+  .projects__text {
+    min-width: 100%;
+  }
+  .projects__slider-title {
+    margin-bottom: 26px;
+  }
+
+.projects__container {
+  min-width: calc(100% - 108px);
+}
+
   /* contacts  */
   .contacts__left {
     width: calc(437 / 924 * 100%);
     padding-right: 102px;
+    padding-bottom: 0;
+  }
+  .contacts__social :nth-child(2) {
+    margin-right: 24px;
+  }
+  .contacts__icon {
+    width: 60px;
   }
   .contacts__right {
     width: calc(487 / 924 * 100% + ((100vw - 100%) / 2));
+    height: 700px;
   }
+
   /* footer */
+  .footer__container {
+    align-items: center;
+  }
   .footer__list :not(:last-child) {
     margin-right: 30px;
+  }
+  .footer__link svg {
+    width: 60px;
+    height: 60px;
   }
 }
 
@@ -633,7 +715,7 @@
   .modal__content {
     flex-direction: column;
   }
-  
+
   .modal {
     width: 100%;
     height: auto;
