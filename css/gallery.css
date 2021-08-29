@@ -103,10 +103,6 @@
   transform: none;
 }
 
-.gallery {
-  position: relative;
-}
-
 .gallery__box {
   display: flex;
   justify-content: space-between;

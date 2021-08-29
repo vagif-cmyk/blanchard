@@ -28,7 +28,7 @@
   animation-duration: 400ms;
 }
 
-.events__card4, .events__card5, .events__pagination {
+ .events__pagination {
   display: none;
 }
 

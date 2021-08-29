@@ -7,7 +7,6 @@
 .editions__flex {
   display: flex;
   justify-content: space-between;
-  /* align-items: baseline; */
 }
 
 .editions__title, .editions__block-left-btn, .editions__label {
@@ -260,7 +259,11 @@
   width: 100%;
   margin-bottom: 18px;
 }
-
+.editions__slide-title, .editions__slide-author {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .editions__slide-title {
   display: inline-block;
   margin: 0;

@@ -237,7 +237,7 @@ const swiperProjects = new Swiper('.projects__container', {
       slidesPerView: 2,
       spaceBetween: 50,
     },
-    1024: {
+    1025: {
       slidesPerView: 3,
       spaceBetween: 50,
     },
@@ -376,7 +376,7 @@ function init() {
     controls: ['geolocationControl', 'zoomControl']
   },
     {
-      geolocationControlPosition: { top: "300px", right: "20px" },
+      geolocationControlPosition: { top: "290px", right: "20px" },
       zoomControlSize: "small",
       zoomControlPosition: { top: "230px", right: "20px" },
     });
