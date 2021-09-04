@@ -95,7 +95,7 @@
         </button>
       </div>
     </div>
-    <div class="bgd-png ">
+    <div class="bgd-png">
       <ul class="dropdown-box container">
         <li class="dropdown">
           <button class="dropbtn" data-path="1">Реализм
@@ -103,10 +103,16 @@
             <span class="dropbtn__icon2"></span>
           </button>
           <div class="dropdown__content-box" data-path="1">
-            <ul class="dropdown__content">
+            <ul class="dropdown__content" data-simplebar>
               <li class="dropdown__item dropdown__item-img1"><a class="dropdown__link" href="">Тинторетто</a></li>
               <li class="dropdown__item dropdown__item-img2"><a class="dropdown__link" href="">Фридрих</a></li>
               <li class="dropdown__item dropdown__item-img3"><a class="dropdown__link" href="">Леонардо</a></li>
+              <li class="dropdown__item dropdown__item-img4"><a class="dropdown__link" href="">Верроккьо</a></li>
+              <li class="dropdown__item dropdown__item-img4"><a class="dropdown__link" href="">Верроккьо</a></li>
+              <li class="dropdown__item dropdown__item-img4"><a class="dropdown__link" href="">Верроккьо</a></li>
+              <li class="dropdown__item dropdown__item-img4"><a class="dropdown__link" href="">Верроккьо</a></li>
+              <li class="dropdown__item dropdown__item-img4"><a class="dropdown__link" href="">Верроккьо</a></li>
+              <li class="dropdown__item dropdown__item-img4"><a class="dropdown__link" href="">Верроккьо</a></li>
               <li class="dropdown__item dropdown__item-img4"><a class="dropdown__link" href="">Верроккьо</a></li>
             </ul>
           </div>
@@ -117,10 +123,12 @@
             <span class="dropbtn__icon2"></span>
           </button>
           <div class="dropdown__content-box" data-path="2">
-            <ul class="dropdown__content">
+            <ul class="dropdown__content" data-simplebar>
               <li class="dropdown__item dropdown__item-img5"><a class="dropdown__link" href="">Моне</a></li>
               <li class="dropdown__item dropdown__item-img6"><a class="dropdown__link" href="">Сислей</a></li>
               <li class="dropdown__item dropdown__item-img7"><a class="dropdown__link" href="">Мане</a></li>
+              <li class="dropdown__item dropdown__item-img8"><a class="dropdown__link" href="">Ренуар</a></li>
+              <li class="dropdown__item dropdown__item-img8"><a class="dropdown__link" href="">Ренуар</a></li>
               <li class="dropdown__item dropdown__item-img8"><a class="dropdown__link" href="">Ренуар</a></li>
             </ul>
           </div>
@@ -131,7 +139,7 @@
             <span class="dropbtn__icon2"></span>
           </button>
           <div class="dropdown__content-box" data-path="3">
-            <ul class="dropdown__content">
+            <ul class="dropdown__content" data-simplebar>
               <li class="dropdown__item dropdown__item-img9"><a class="dropdown__link" href="">Ван Гог</a></li>
               <li class="dropdown__item dropdown__item-img10"><a class="dropdown__link" href="">Сезанн</a></li>
               <li class="dropdown__item dropdown__item-img11"><a class="dropdown__link" href="">Гоген</a></li>
@@ -145,7 +153,7 @@
             <span class="dropbtn__icon2"></span>
           </button>
           <div class="dropdown__content-box" data-path="4">
-            <ul class="dropdown__content">
+            <ul class="dropdown__content" data-simplebar>
               <li class="dropdown__item dropdown__item-img13"><a class="dropdown__link" href="">Кандинский</a></li>
               <li class="dropdown__item dropdown__item-img14"><a class="dropdown__link" href="">Маринетти</a></li>
               <li class="dropdown__item dropdown__item-img15"><a class="dropdown__link" href="">Малевич</a></li>
@@ -159,7 +167,7 @@
             <span class="dropbtn__icon2"></span>
           </button>
           <div class="dropdown__content-box" data-path="5">
-            <ul class="dropdown__content">
+            <ul class="dropdown__content" data-simplebar>
               <li class="dropdown__item dropdown__item-img17"><a class="dropdown__link" href="">Карра</a></li>
               <li class="dropdown__item dropdown__item-img18"><a class="dropdown__link" href="">Прателла</a></li>
               <li class="dropdown__item dropdown__item-img19"><a class="dropdown__link" href="">Северини</a></li>
@@ -181,6 +189,7 @@
             <input class="header__search" type="text" placeholder="Поиск по сайту">
           </form>
         </li>
+        <span class="header__mob-form-cross">&times;</span>
       </ul>
     </div>
   </header>
@@ -251,151 +260,175 @@
           <div class="gallery__wrapper">
             <button class="gallery__slide" data-path="1">
               <picture>
+                <source srcset="img/gallery/mob1.jpg" media="(max-width: 670px)">
                 <source srcset="img/gallery/gallery1.jpg 1x, img/gallery/gallery1-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery1.jpg" alt="картина">
               </picture>
             </button>
             <button class="gallery__slide" data-path="2">
               <picture>
+                <source srcset="img/gallery/mob2.jpg" media="(max-width: 670px)">
                 <source srcset="img/gallery/gallery2.jpg 1x, img/gallery/gallery2-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery2.jpg" alt="картина">
               </picture>
             </button>
             <button class="gallery__slide" data-path="3">
               <picture>
+                <source srcset="img/gallery/mob3.jpg" media="(max-width: 670px)">
                 <source srcset="img/gallery/gallery3.jpg 1x, img/gallery/gallery3-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery3.jpg" alt="картина">
               </picture>
             </button>
             <button class="gallery__slide" data-path="4">
               <picture>
+                <source srcset="img/gallery/mob4.jpg" media="(max-width: 670px)">
                 <source srcset="img/gallery/gallery7.jpg 1x, img/gallery/gallery7-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery7.jpg" alt="картина">
               </picture>
             </button>
             <button class="gallery__slide" data-path="5">
               <picture>
+                <source srcset="img/gallery/mob5.jpg" media="(max-width: 670px)">
                 <source srcset="img/gallery/gallery8.jpg 1x, img/gallery/gallery8-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery8.jpg" alt="картина">
               </picture>
             </button>
             <button class="gallery__slide" data-path="6">
               <picture>
+                <source srcset="img/gallery/mob6.jpg" media="(max-width: 670px)">
                 <source srcset="img/gallery/gallery9.jpg 1x, img/gallery/gallery9-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery9.jpg" alt="картина">
               </picture>
             </button>
             <button class="gallery__slide" data-path="7">
               <picture>
+                <source srcset="img/gallery/mob7.jpg" media="(max-width: 670px)">
                 <source srcset="img/gallery/gallery13.jpg 1x, img/gallery/gallery13-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery13.jpg" alt="картина">
               </picture>
             </button>
             <button class="gallery__slide" data-path="8">
               <picture>
+                <source srcset="img/gallery/mob8.jpg" media="(max-width: 670px)">
                 <source srcset="img/gallery/gallery14.jpg 1x, img/gallery/gallery14-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery14.jpg" alt="картина">
               </picture>
             </button>
             <button class="gallery__slide" data-path="9">
               <picture>
+                <source srcset="img/gallery/mob9.jpg" media="(max-width: 670px)">
                 <source srcset="img/gallery/gallery15.jpg 1x, img/gallery/gallery15-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery15.jpg" alt="картина">
               </picture>
             </button>
             <button class="gallery__slide" data-path="10">
               <picture>
+                <source srcset="img/gallery/mob10.jpg" media="(max-width: 670px)">
                 <source srcset="img/gallery/gallery19.jpg 1x, img/gallery/gallery19-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery19.jpg" alt="картина">
               </picture>
             </button>
             <button class="gallery__slide" data-path="11">
               <picture>
+                <source srcset="img/gallery/mob11.jpg" media="(max-width: 670px)">
                 <source srcset="img/gallery/gallery20.jpg 1x, img/gallery/gallery20-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery20.jpg" alt="картина">
               </picture>
             </button>
             <button class="gallery__slide" data-path="12">
               <picture>
+                <source srcset="img/gallery/mob12.jpg" media="(max-width: 670px)">
                 <source srcset="img/gallery/gallery21.jpg 1x, img/gallery/gallery21-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery21.jpg" alt="картина">
               </picture>
             </button>
             <button class="gallery__slide" data-path="13">
               <picture>
+                <source srcset="img/gallery/mob13.jpg" media="(max-width: 670px)">
                 <source srcset="img/gallery/gallery4.jpg 1x, img/gallery/gallery4-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery4.jpg" alt="картина">
               </picture>
             </button>
             <button class="gallery__slide" data-path="14">
               <picture>
+                <source srcset="img/gallery/mob14.jpg" media="(max-width: 670px)">
                 <source srcset="img/gallery/gallery5.jpg 1x, img/gallery/gallery5-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery5.jpg" alt="картина">
               </picture>
             </button>
             <button class="gallery__slide" data-path="15">
               <picture>
+                <source srcset="img/gallery/mob15.jpg" media="(max-width: 670px)">
                 <source srcset="img/gallery/gallery6.jpg 1x, img/gallery/gallery6-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery6.jpg" alt="картина">
               </picture>
             </button>
             <button class="gallery__slide" data-path="16">
               <picture>
+                <source srcset="img/gallery/mob16.jpg" media="(max-width: 670px)">
                 <source srcset="img/gallery/gallery10.jpg 1x, img/gallery/gallery10-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery10.jpg" alt="картина">
               </picture>
             </button>
             <button class="gallery__slide" data-path="17">
               <picture>
+                <source srcset="img/gallery/mob17.jpg" media="(max-width: 670px)">
                 <source srcset="img/gallery/gallery11.jpg 1x, img/gallery/gallery11-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery11.jpg" alt="картина">
               </picture>
             </button>
             <button class="gallery__slide" data-path="18">
               <picture>
+                <source srcset="img/gallery/mob18.jpg" media="(max-width: 670px)">
                 <source srcset="img/gallery/gallery12.jpg 1x, img/gallery/gallery12-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery12.jpg" alt="картина">
               </picture>
             </button>
             <button class="gallery__slide" data-path="19">
               <picture>
+                <source srcset="img/gallery/mob19.jpg" media="(max-width: 670px)">
                 <source srcset="img/gallery/gallery16.jpg 1x, img/gallery/gallery16-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery16.jpg" alt="картина">
               </picture>
             </button>
             <button class="gallery__slide" data-path="20">
               <picture>
+                <source srcset="img/gallery/mo20.jpg" media="(max-width: 670px)">
                 <source srcset="img/gallery/gallery17.jpg 1x, img/gallery/gallery17-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery17.jpg" alt="картина">
               </picture>
             </button>
             <button class="gallery__slide" data-path="21">
               <picture>
+                <source srcset="img/gallery/mo21.jpg" media="(max-width: 670px)">
                 <source srcset="img/gallery/gallery18.jpg 1x, img/gallery/gallery18-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery18.jpg" alt="картина">
               </picture>
             </button>
             <button class="gallery__slide" data-path="22">
               <picture>
+                <source srcset="img/gallery/mob22.jpg" media="(max-width: 670px)">
                 <source srcset="img/gallery/gallery22.jpg 1x, img/gallery/gallery22-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery22.jpg" alt="картина">
               </picture>
             </button>
             <button class="gallery__slide" data-path="23">
               <picture>
+                <source srcset="img/gallery/mob23.jpg" media="(max-width: 670px)">
                 <source srcset="img/gallery/gallery23.jpg 1x, img/gallery/gallery23-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery23.jpg" alt="картина">
               </picture>
             </button>
             <button class="gallery__slide" data-path="24">
               <picture>
+                <source srcset="img/gallery/mob24.jpg" media="(max-width: 670px)">
                 <source srcset="img/gallery/gallery24.jpg 1x, img/gallery/gallery24-2x.jpg 2x">
                 <img class="gallery__slide-image" src="img/gallery/gallery24.jpg" alt="картина">
               </picture>
             </button>
           </div>
         </div>
-        <div class="modals modals__container">
+        <div class="modals modals-container">
           <div class="modals__overlay">
             <div class="modals__modal modal" data-target="1">
               <span class="modal__close">&times;</span>
@@ -1730,10 +1763,8 @@
                 <img class="editions__slide-img" src="../img/editions/editions1.jpg"
                   srcset="../img/editions/editions1-2x.jpg 2x" alt="картина">
                 <div class="editions__slide-desc">
-                  <!-- <div class="editions__price-box"> -->
                   <h3 class="editions__slide-title">Искусство цвета</h3>
                   <span class="editions__slide-price">600 руб</span>
-                  <!-- </div> -->
                   <span class="editions__slide-author">Иттен, Иоханнес</span>
                   <button class="editions__slide-btn">Заказать</button>
                 </div>
@@ -1742,10 +1773,8 @@
                 <img class="editions__slide-img" src="../img/editions/editions2.jpg"
                   srcset="../img/editions/editions2-2x.jpg 2x" alt="картина">
                 <div class="editions__slide-desc">
-                  <!-- <div class="editions__price-box"> -->
                   <h3 class="editions__slide-title">Типографика</h3>
                   <span class="editions__slide-price">2 450 руб</span>
-                  <!-- </div> -->
                   <span class="editions__slide-author">Рудер, Эмиль</span>
                   <button class="editions__slide-btn">Заказать</button>
                 </div>
@@ -1754,10 +1783,8 @@
                 <img class="editions__slide-img" src="../img/editions/editions3.jpg"
                   srcset="../img/editions/editions3-2x.jpg 2x" alt="картина">
                 <div class="editions__slide-desc">
-                  <!-- <div class="editions__price-box"> -->
                   <h3 class="editions__slide-title">Книга про буквы</h3>
                   <span class="editions__slide-price">2 200 руб</span>
-                  <!-- </div> -->
                   <span class="editions__slide-author">Гордон, Юрий</span>
                   <button class="editions__slide-btn">Заказать</button>
                 </div>
@@ -1766,10 +1793,8 @@
                 <img class="editions__slide-img" src="../img/editions/editions4.jpg"
                   srcset="../img/editions/editions4-2x.jpg 2x" alt="картина">
                 <div class="editions__slide-desc">
-                  <!-- <div class="editions__price-box"> -->
                   <h3 class="editions__slide-title">Николай Ильин</h3>
                   <span class="editions__slide-price">1 100 руб</span>
-                  <!-- </div> -->
                   <span class="editions__slide-author">Кричевский, Владимир</span>
                   <button class="editions__slide-btn">Заказать</button>
                 </div>
@@ -1778,10 +1803,8 @@
                 <img class="editions__slide-img" src="../img/editions/editions5.jpg"
                   srcset="../img/editions/editions5-2x.jpg 2x" alt="картина">
                 <div class="editions__slide-desc">
-                  <!-- <div class="editions__price-box"> -->
                   <h3 class="editions__slide-title">Модульные сетки в граф...</h3>
                   <span class="editions__slide-price">1 450 руб</span>
-                  <!-- </div> -->
                   <span class="editions__slide-author">Мюллер-Брокманн, Йозеф</span>
                   <button class="editions__slide-btn">Заказать</button>
                 </div>
@@ -1790,10 +1813,8 @@
                 <img class="editions__slide-img" src="../img/editions/editions6.jpg"
                   srcset="../img/editions/editions6-2x.jpg 2x" alt="картина">
                 <div class="editions__slide-desc">
-                  <!-- <div class="editions__price-box"> -->
                   <h3 class="editions__slide-title">Эволюция графических ст...</h3>
                   <span class="editions__slide-price">3 200 руб</span>
-                  <!-- </div> -->
                   <span class="editions__slide-author">Хеллер, Чваст</span>
                   <button class="editions__slide-btn">Заказать</button>
                 </div>
@@ -1802,10 +1823,8 @@
                 <img class="editions__slide-img" src="../img/editions/editions7.jpg"
                   srcset="../img/editions/editions7-2x.jpg 2x" alt="картина">
                 <div class="editions__slide-desc">
-                  <!-- <div class="editions__price-box"> -->
                   <h3 class="editions__slide-title">Искусство и визуальное в...</h3>
                   <span class="editions__slide-price">2 200 руб</span>
-                  <!-- </div> -->
                   <span class="editions__slide-author">Арнхейм, Рудольф</span>
                   <button class="editions__slide-btn">Заказать</button>
                 </div>

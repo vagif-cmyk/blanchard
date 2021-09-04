@@ -3,7 +3,7 @@
   color: #333;
 }
 
-.modals__container {
+.modals-container {
   max-width: 50%;
   margin: 0 auto;
 }
@@ -26,8 +26,9 @@
 .modal {
   display: none;
   width: 900px;
-  background-color: #fff;
   height: 500px;
+  font-size: 0;
+  background-color: #fff;
   overflow-y: auto;
 }
 

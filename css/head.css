@@ -127,7 +127,6 @@ button {
   left: 0;
   height: 3px;
   margin-top: -1px;
-  /* margin-left: -14px; */
   background-color: #fff;
 }
 
@@ -280,7 +279,6 @@ button {
 
 .header__search-mob {
   display: none;
-  /* padding: 0; */
   background: transparent;
 }
 
@@ -527,6 +525,15 @@ button {
   margin-left: auto;
 }
 
+.header__mob-form-cross {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: none;
+  padding: 6px;
+  color: #fff;
+}
+
 .header__search {
   width: 220px;
   padding: 0;
@@ -593,6 +600,7 @@ button {
   display: block;
 }
 
+
 /* simplebar */
 
 .simplebar-scrollbar:before {
@@ -618,6 +626,14 @@ button {
 }
 
 /* keyframes */
+@keyframes show-mob-form {
+   0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 @keyframes show-drop {
   0% {

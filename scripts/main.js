@@ -13,6 +13,16 @@ document.querySelectorAll('.dropbtn').forEach((e, i) => {
   e.addEventListener('click', () => hideShowBlock(e, i));
 });
 
+document.querySelector('.header__search-mob').addEventListener('click', () => {
+  document.querySelector('.bgd-png').classList.toggle('show-mob-form');
+  document.querySelector('.header__search').focus();
+});
+
+document.querySelector('.header__mob-form-cross').addEventListener('pointerdown', () => {
+  document.querySelector('.bgd-png').classList.toggle('show-mob-form');
+});
+
+
 document.querySelectorAll('[class^="countries__btn"]').forEach((e) => {
   showTab(e);
 });
@@ -38,6 +48,8 @@ document.querySelectorAll('.editions__item').forEach(elem => {
     elem.classList.remove('editions__item-active');
   });
 });
+
+
 
 (function () {
 
@@ -258,7 +270,11 @@ tippy('.projects__tyl-3', {
   theme: 'violet',
 });
 
-// функция которая откроет меню.
+// функция которая откроет поиск в header-е.
+// function toogleClass(elem, styles) {
+  // document.querySelector(elem).classList.toggle(styles);
+// }
+// функция которая откроет меню в header-е.
 function openMenu() {
   document.body.style.overflow = 'hidden';
   document.querySelector('.header-nav').classList.add('is-open');
