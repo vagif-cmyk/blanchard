@@ -27,6 +27,14 @@ document.querySelectorAll('[class^="countries__btn"]').forEach((e) => {
   showTab(e);
 });
 document.querySelectorAll('.accor__btn').forEach((e) => {
+  e.addEventListener('click', () => {
+          const artist = document.querySelector('.artist');
+          window.scroll( {
+            left: 0,
+            top: artist.offsetTop,
+            behavior: 'smooth',
+          });
+        });
   showTabArtist(e);
 });
 document.querySelector('.events__btn').addEventListener('click', (e) => {
